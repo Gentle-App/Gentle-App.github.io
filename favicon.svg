@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <!-- The app icon: a glossy candy heart with sparkles on a bubblegum-to-lilac square (app/src/main/res/drawable/ic_launcher_*). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD6EC"/><stop offset=".55" stop-color="#FFA6D5"/><stop offset="1" stop-color="#D9A6FF"/>
+    </linearGradient>
+    <linearGradient id="hg" x1="40" y1="30" x2="66" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8ACB"/><stop offset=".45" stop-color="#FF2E93"/><stop offset="1" stop-color="#C2006B"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="38" y1="34" x2="44" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" rx="24" fill="url(#bg)"/>
+  <g transform="translate(-8.6 -6.5) scale(1.16)">
+    <path d="M54,81 C33,66 28,55 28,47 C28,39.5 34,34 41,34 C46.5,34 51,37 54,42 C57,37 61.5,34 67,34 C74,34 80,39.5 80,47 C80,55 75,66 54,81 Z" fill="url(#hg)"/>
+    <path d="M54,81 C33,66 28,55 28,47 C28,39.5 34,34 41,34 C46.5,34 51,37 54,42 C57,37 61.5,34 67,34 C74,34 80,39.5 80,47 C80,55 75,66 54,81 Z" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6"/>
+    <path d="M35,45 C35,40 39,37.5 43,37.5 C46.5,37.5 49,39.5 50.5,42.5 C46,42 40,44 37,49 C35.8,48.2 35,46.8 35,45 Z" fill="url(#hs)"/>
+  </g>
+  <path d="M85,18 L86.6,23.4 L92,25 L86.6,26.6 L85,32 L83.4,26.6 L78,25 L83.4,23.4 Z" fill="#fff"/>
+  <path d="M20,74 L21.1,77.4 L24.5,78.5 L21.1,79.6 L20,83 L18.9,79.6 L15.5,78.5 L18.9,77.4 Z" fill="#FFE48A"/>
+</svg>

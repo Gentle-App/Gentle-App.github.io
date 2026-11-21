@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="aero">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy: Your Data Stays on Your Phone | Gentle</title>
+  <meta name="description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <link rel="canonical" href="https://gentle-app.github.io/privacy.html">
+  <meta name="theme-color" content="#8FD3FF">
+
+  <meta property="og:site_name" content="Gentle">
+  <meta property="og:title" content="Privacy: Your Data Stays on Your Phone | Gentle">
+  <meta property="og:description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gentle-app.github.io/privacy.html">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://gentle-app.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gentle, a free energy pacing app, showing today's energy points">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy: Your Data Stays on Your Phone | Gentle">
+  <meta name="twitter:description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <meta name="twitter:image" content="https://gentle-app.github.io/og-image.png">
+
+  <script>
+    // Set the theme and low-stimulus mode before anything draws, so there's no flash of the wrong look.
+    (function () {
+      var d = document.documentElement, t = null, low = null;
+      try {
+        t = localStorage.getItem('gentle-theme');
+        low = localStorage.getItem('gentle-low');
+        // Low stimulus used to be one of the themes; it's a separate switch now.
+        if (t === 'low') { t = 'dark'; low = 'on'; localStorage.setItem('gentle-theme', t); localStorage.setItem('gentle-low', low); }
+      } catch (e) {}
+      if (!t) t = 'aero'; // Frutiger Aero is the default look, as in the app
+      d.setAttribute('data-theme', t);
+      if (low === 'on') d.setAttribute('data-low', 'on');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sniglet:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=cb954f28">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Gentle",
+      "item": "https://gentle-app.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy",
+      "item": "https://gentle-app.github.io/privacy.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy: Your Data Stays on Your Phone",
+  "description": "Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.",
+  "url": "https://gentle-app.github.io/privacy.html",
+  "about": {
+    "@id": "https://gentle-app.github.io/#app"
+  },
+  "dateModified": "2026-11-21"
+}
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="hg" x1="40" y1="30" x2="66" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8ACB"/><stop offset=".45" stop-color="#FF2E93"/><stop offset="1" stop-color="#C2006B"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="38" y1="34" x2="44" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+    <symbol id="heart" viewBox="0 0 108 108">
+      <g transform="translate(0 4)">
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="url(#hg)"/>
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6"/>
+        <path d="M35,41 C35,36 39,33.5 43,33.5 C46.5,33.5 49,35.5 50.5,38.5 C46,38 40,40 37,45 C35.8,44.2 35,42.8 35,41 Z" fill="url(#hs)"/>
+        <circle cx="70.5" cy="38" r="2.2" fill="#fff" fill-opacity=".8"/>
+      </g>
+      <path d="M81,25 L82.4,29.6 L87,31 L82.4,32.4 L81,37 L79.6,32.4 L75,31 L79.6,29.6 Z" fill="#fff"/>
+      <path d="M28,62 L29,65 L32,66 L29,67 L28,70 L27,67 L24,66 L27,65 Z" fill="#FFE48A"/>
+    </symbol>
+  </defs>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-0">How it works</button>
+        <ul class="sub" id="sub-0" hidden>
+          <li><a href="energy-pacing-app.html">How the points work</a></li>
+          <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+          <li><a href="crash-pem-tracker.html">Crashes and PEM</a></li>
+          <li><a href="bowel-movement-tracker.html">Gut and food</a></li>
+          <li><a href="works-with-your-watch.html">Watches</a></li>
+          <li><a href="themes.html">Themes</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-1">Who it&#x27;s for</button>
+        <ul class="sub" id="sub-1" hidden>
+          <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+          <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD</a></li>
+          <li><a href="index.html#who">Any energy-limiting condition</a></li>
+        </ul>
+      </li>
+      <li><a href="free-no-subscription.html">Free for good</a></li>
+      <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="theme-picker">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="palette" viewBox="0 0 24 24" aria-hidden="true"><path class="rim" d="M12 2.8c-5.1 0-9.2 3.9-9.2 8.9 0 5 4 9.5 9 9.5 1.2 0 1.9-.8 1.9-1.8 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8h2.1c2.7 0 4.9-2.2 4.9-4.9 0-4.3-4.2-7.3-9.5-7.3Z"/><circle class="d1" cx="7.4" cy="11.8" r="1.7"/><circle class="d2" cx="10.3" cy="7.4" r="1.7"/><circle class="d3" cx="15.1" cy="7.7" r="1.7"/></svg><span class="theme-label">Theme</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" hidden>
+          <p class="theme-menu-title" id="theme-menu-title">The app's themes</p>
+          <div role="radiogroup" aria-labelledby="theme-menu-title">
+            <button type="button" data-set-theme="calm" role="radio" aria-checked="false"><span class="swatch swatch-calm"></span><span>Calm</span></button>
+            <button type="button" data-set-theme="dark" role="radio" aria-checked="false"><span class="swatch swatch-dark"></span><span>Dark</span></button>
+            <button type="button" data-set-theme="pink" role="radio" aria-checked="false"><span class="swatch swatch-pink"></span><span>Pink</span></button>
+            <button type="button" data-set-theme="y2k" role="radio" aria-checked="false"><span class="swatch swatch-y2k"></span><span>Y2K sparkle</span></button>
+            <button type="button" data-set-theme="aero" role="radio" aria-checked="false"><span class="swatch swatch-aero"></span><span>Frutiger Aero</span></button>
+          </div>
+          <div class="theme-menu-divider"></div>
+          <button type="button" class="low-toggle" id="low-toggle" role="switch" aria-checked="false">
+            <span class="low-text"><span>Low stimulus</span><span class="low-hint">Dim, muted and still, on any theme</span></span><span class="switch" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span class="burger" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <nav aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Privacy</li></ol></nav>
+</div>
+<main id="main">
+<header class="hero">
+  <div class="container narrow">
+    <p class="eyebrow">Privacy</p>
+    <h1>Your data stays on your phone</h1>
+    <p class="lede">Everything you log in Gentle, and everything it reads from your watch, is stored on your phone. It isn't sent to me or to anyone else. There's no Gentle account, and no Gentle server to send it to.</p>
+    <p class="small muted">Last updated 21 November 2026.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container narrow">
+    <h2>The main points</h2>
+    <ul class="ticks">
+      <li>Your health data is stored on your phone and never shared with anyone, me included.</li>
+      <li>The only time I see any of it is if you send me a bug report and choose to include your data. I use it to fix the problem, delete it once the bug is fixed, and never pass it to anyone else.</li>
+      <li>Gentle reads from Health Connect and never writes to it.</li>
+      <li>There's no analytics or tracking inside the app.</li>
+      <li>The ads never get your health data.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>What Gentle keeps, and where</h2>
+    <p>Gentle keeps your check-ins, notes, crashes, food and bowel logs, plans and settings, and the watch data it has read, in its own private storage on your phone, where other apps can't read it. Uninstalling Gentle deletes it all, and there's also a button in Settings that deletes everything without uninstalling.</p>
+    <p>If you make a backup or a report for your doctor, the file goes wherever you choose to save or send it.</p>
+
+    <h2>What Gentle reads from Health Connect</h2>
+    <p>With your permission, Gentle reads steps, heart rate, resting heart rate, heart rate variability, sleep, exercise sessions, calories, distance, floors, blood oxygen, breathing rate, skin and body temperature, menstruation, weight, nutrition and hydration. You choose which of these it can read, and you can change that in Health Connect whenever you like. Gentle only uses them on your phone, to work out your energy points, alerts and patterns.</p>
+
+    <h2>The watch app</h2>
+    <p>The Gentle watch app sends heart rate and steps from your watch to Gentle on your paired phone, and the phone sends back your points left and your pace line. That data only goes between your own watch and phone.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>When anything leaves your phone</h2>
+    <p>Only in these cases, and only when you choose.</p>
+    <h3>Bug reports</h3>
+    <p>Please send one whenever something seems wrong, however small. In the app, More, then "Report a problem" builds a report you can read before sending. It can include technical details, today's energy figures, your notes, recent voice notes and a copy of your Gentle data, and each of those has its own switch. They all start switched on, because the more I can see, the faster I can fix the problem, so switch off anything you'd rather not send. Your AI key is never included.</p>
+    <p>The report goes from your own email app to gentleappdev@gmail.com. I only use it to find and fix the problem, I delete it once the bug is fixed, and it's never passed to anyone else.</p>
+    <h3>The AI helper, if you set one up</h3>
+    <p>The AI helper is off unless you turn it on, and there are two kinds. One runs on your phone: Gentle downloads a language model once, and after that nothing about you is sent anywhere. The other runs online, with your own key from a provider you pick, such as Google Gemini or Groq. When you ask that one something, your question and a summary of your data go to the provider, under their terms. Gentle tells you this when you set it up.</p>
+    <h3>Voice notes</h3>
+    <p>Voice notes use your phone's own speech recognition service, which on most Android phones is Google's. Depending on your phone and its settings, your speech may be turned into text on the phone or by that service. Gentle only receives the words, and works out what you meant on your phone.</p>
+    <h3>Ads</h3>
+    <p>Gentle shows small banner ads through Google AdMob. To show an ad, AdMob receives standard information about your device, such as an advertising identifier, your IP address and your device type. It never receives your health data or anything you've logged. In the UK and EU, Gentle asks for your consent before any ads are personalised. You can reset or delete your advertising ID in your phone's settings, and a one-off 99p removes the ads completely.</p>
+    <h3>The 99p purchase</h3>
+    <p>Google Play handles the payment, so Gentle never sees your card details. All it learns is whether you've bought "Remove ads".</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>Permissions, and why each one is there</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Health Connect (read only)</td><td>Steps, heart rate, sleep and the other types above, from your watch's app.</td></tr>
+          <tr><td>Notifications</td><td>Check-in reminders, pace-line alerts and budget alerts.</td></tr>
+          <tr><td>Microphone</td><td>Voice notes, only while you're recording one.</td></tr>
+          <tr><td>Camera</td><td>Measuring HRV with your fingertip over the camera. The picture is analysed on your phone and not saved.</td></tr>
+          <tr><td>Bluetooth</td><td>Connecting a heart-rate chest strap or armband, if you use one.</td></tr>
+          <tr><td>Location</td><td>Only on older versions of Android, which need it to scan for Bluetooth devices. Gentle doesn't use your location.</td></tr>
+          <tr><td>Internet</td><td>Downloading the on-phone AI model, the online AI helper if you set one up, and the ads.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Questions</h2>
+    <p>Email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a>. If this policy changes, the date at the top will change with it.</p>
+  </div>
+</section>
+</main>
+
+<section class="related">
+  <div class="container">
+    <h2>Related pages</h2>
+    <ul class="related-list">
+      <li><a href="free-no-subscription.html"><strong>Free for good</strong><span>No subscriptions or premium features, ever. One optional 99p to remove the ads.</span></a></li>
+      <li><a href="works-with-your-watch.html"><strong>Watches and Health Connect</strong><span>Pixel Watch, Fitbit, Samsung, Garmin and more, through Health Connect.</span></a></li>
+      <li><a href="index.html"><strong>Home</strong><span>A free pacing app for ME/CFS, Long COVID, Crohn&#x27;s and other energy-limiting conditions. Daily energy points from your watch. No subscriptions, ever.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="promise-band" aria-label="The promise">
+  <div class="container promise-inner">
+    <p class="promise-head">Free, and it'll stay free</p>
+    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your data stays on your phone, and nobody else gets it, me included.</p>
+    <p class="promise-links"><a href="free-no-subscription.html">Why it's free</a> &middot; <a href="privacy.html">Privacy</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand brand-footer"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+      <p>A pacing app for anyone who has to manage limited energy, made by one person.</p>
+      <p>Found a bug, even a tiny one, or have an idea for a new feature? Please tell me: <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a></p>
+    </div>
+    <div>
+      <h2 class="footer-head">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="energy-pacing-app.html">How the points work</a></li>
+        <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+        <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+        <li><a href="crash-pem-tracker.html">Crash and PEM tracker</a></li>
+        <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD fatigue</a></li>
+        <li><a href="bowel-movement-tracker.html">Bowel movements and food</a></li>
+        <li><a href="works-with-your-watch.html">Watches and Health Connect</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="free-no-subscription.html">Free for good</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-small">
+    <p>Gentle is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Talk to your doctor or care team before changing how you manage your health.</p>
+    <p>Android, Google Play, Wear OS, Pixel and Fitbit are trademarks of Google LLC. Other product names belong to their owners.</p>
+  </div>
+</footer>
+
+<script src="site.js?v=cb954f28" defer></script>
+</body>
+</html>
