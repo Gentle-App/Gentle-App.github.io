@@ -176,4 +176,92 @@
     // Tapping the dimmed page outside the top bar closes the menu.
     document.addEventListener('click', function (e) { if (root.classList.contains('nav-open') && !e.target.closest('.site-nav')) closeNav(); });
   }
+  // Cookies for the website's analytics: Google Analytics (through Google Tag Manager) and Microsoft Clarity.
+  // UK and EU law needs a yes before these load, so nothing loads until the visitor accepts. The choice is kept in
+  // this browser and can be changed from "Cookie settings" in the footer. The Gentle app itself has no analytics.
+  var CONSENT_KEY = 'gentle-cookies';
+  var body = document.body;
+  var gtmId = body.getAttribute('data-gtm');
+  var clarityId = body.getAttribute('data-clarity');
+  var loaded = false;
+
+  function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+
+  function loadAnalytics() {
+    if (loaded) return;
+    loaded = true;
+    if (gtmId) {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(gtmId);
+      document.head.appendChild(g);
+    }
+    if (clarityId) {
+      window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+      var c = document.createElement('script');
+      c.async = true;
+      c.src = 'https://www.clarity.ms/tag/' + encodeURIComponent(clarityId);
+      document.head.appendChild(c);
+      window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+    }
+  }
+
+  function clearAnalyticsCookies() {
+    document.cookie.split(';').forEach(function (part) {
+      var name = part.split('=')[0].trim();
+      if (/^(_ga|_gid|_gat|_clck|_clsk|CLID|MUID)/.test(name)) {
+        var gone = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        document.cookie = name + gone;
+        document.cookie = name + gone + '; domain=' + location.hostname;
+        document.cookie = name + gone + '; domain=.' + location.hostname;
+      }
+    });
+  }
+
+  function choose(value) {
+    var before = getConsent();
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* asked again next visit */ }
+    hideBanner();
+    if (value === 'granted') {
+      loadAnalytics();
+    } else if (before === 'granted' || loaded) {
+      // Changed their mind: tell both services, remove their cookies, and reload so nothing keeps running.
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+      if (window.clarity) window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+      clearAnalyticsCookies();
+      location.reload();
+    }
+  }
+
+  var banner = null;
+  function hideBanner() { if (banner) { banner.parentNode.removeChild(banner); banner = null; } }
+  function showBanner() {
+    if (banner || !(gtmId || clarityId)) return;
+    banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Cookies');
+    banner.innerHTML =
+      '<p>Can this site use cookies from Google Analytics and Microsoft Clarity? They show me which pages people find useful, ' +
+      'and they only load if you say yes. <a href="privacy.html#website">More about this</a></p>' +
+      '<div class="cookie-actions">' +
+      '<button type="button" class="btn btn-quiet" data-consent="denied">No thanks</button>' +
+      '<button type="button" class="btn btn-quiet" data-consent="granted">Yes, that\'s fine</button>' +
+      '</div>';
+    banner.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-consent]');
+      if (b) choose(b.getAttribute('data-consent'));
+    });
+    body.appendChild(banner);
+  }
+
+  var choice = getConsent();
+  if (choice === 'granted') loadAnalytics();
+  else if (choice !== 'denied') showBanner();
+  var settings = document.getElementById('cookie-settings');
+  if (settings) settings.addEventListener('click', function () { showBanner(); var first = banner && banner.querySelector('button'); if (first) first.focus(); });
 })();

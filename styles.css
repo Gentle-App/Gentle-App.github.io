@@ -624,6 +624,20 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 }
 html[data-low="on"] .decor { display: none; }
 
+/* The cookie choice: a small bar at the bottom of the page, never a pop-up over it. Both answers look the same. */
+.cookie-banner {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; max-width: 760px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 16px 14px 18px;
+  background: var(--table-bg); color: var(--ink); border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+[data-theme="y2k"] .cookie-banner { border: 2px solid var(--line); box-shadow: 4px 4px 0 var(--line); }
+.cookie-banner p { flex: 1 1 320px; margin: 0; font-size: 0.94rem; line-height: 1.5; }
+.cookie-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cookie-actions .btn { min-height: 44px; padding: 8px 18px; font-size: 0.95rem; }
+.link-button { font: inherit; font-size: inherit; color: var(--primary); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
+html[data-low="on"] .cookie-banner { border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
+
 /* Low stimulus: a switch, separate from the theme. Like the app, it overrides the theme's colours with very muted,
    low-contrast ones (light or dark, following the theme), and turns off gradients, glitter, glass, shadows and movement. */
 html[data-low="on"] {
