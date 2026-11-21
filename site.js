@@ -13,7 +13,7 @@
   var themeColours = { calm: '#F4F1EA', dark: '#121614', pink: '#FFE6F3', y2k: '#FFE6F2', aero: '#8FD3FF' };
   var lowColours = { light: '#E7E5E0', dark: '#0B0C0C' };
 
-  // Gentle moving decorations for Y2K sparkle and Frutiger Aero, like the app's own (Decor3.kt) but fewer and slower.
+  // Gentle moving decorations for Y2K sparkle and Frutiger Aero, like the app's own but fewer and slower.
   // The CSS hides them in low-stimulus mode and stills them for anyone whose device asks for reduced motion.
   var PASTELS = ['#FFB8DA', '#FFD3B5', '#FFF1A8', '#BDF2D5', '#B9DCFF', '#DCC6FF'];
   var SPARK = '<svg viewBox="-10 -10 20 20"><path d="M0-10C.8-3 3-.8 10 0 3 .8.8 3 0 10-.8 3-3 .8-10 0-3-.8-.8-3 0-10Z"/></svg>';

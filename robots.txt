@@ -6,8 +6,6 @@ Sitemap: https://gentle-app.github.io/sitemap.xml
 
 User-agent: *
 Allow: /
-Disallow: /src/
-Disallow: /scripts/
 
 User-agent: GPTBot
 Allow: /

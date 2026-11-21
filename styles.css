@@ -1,4 +1,4 @@
-/* Gentle website. Themes mirror the app's own (ui/theme/Theme.kt): Calm, Dark, Low stimulus, Pink, Y2K sparkle, Frutiger Aero. */
+/* Gentle website. The themes match the app's: Calm, Dark, Pink, Y2K sparkle and Frutiger Aero, plus a low-stimulus switch. */
 
 :root,
 [data-theme="calm"] {
@@ -477,7 +477,7 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .theme-gallery figcaption { text-align: center; margin-top: 10px; font-weight: 700; }
 .theme-gallery figcaption span { display: block; font-weight: 400; font-size: 0.9rem; color: var(--muted); }
 
-/* FAQ, like Write as Rain: several can be open at once */
+/* FAQ: several can be open at once */
 .faq { display: grid; gap: 10px; }
 .faq-item { background: var(--surface); border: var(--card-border); border-radius: 16px; box-shadow: var(--card-shadow); backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur); }
 .faq-item summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 18px; font-weight: 700; position: relative; min-height: 44px; }
@@ -538,7 +538,7 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .bug-plea { border: 2px dashed var(--primary); border-radius: var(--radius); padding: 18px 20px; background: var(--surface); margin: 0 0 1em; }
 .bug-plea p:last-child { margin-bottom: 0; }
 
-/* Moving decorations for Y2K sparkle and Frutiger Aero, added by site.js. They follow the app's own (Decor3.kt) but with
+/* Moving decorations for Y2K sparkle and Frutiger Aero, added by site.js. They follow the app's own but with
    far fewer pieces, moving slowly, behind everything, and mostly in the margins. Low stimulus hides them; reduced motion
    stills them and drops anything that travels. */
 /* Above section backgrounds, so nothing is half-hidden crossing from one section to the next, but below the content,
