@@ -426,6 +426,9 @@ p, li { text-wrap: pretty; }
 
 /* Feature rows: text beside a screenshot, alternating sides on wide screens */
 .feature { display: grid; gap: 28px; align-items: center; }
+/* When the heading sits above the row, the text starts right under it instead of floating halfway down the phone */
+.feature-top { align-items: start; }
+.feature-top .steps { margin-top: 6px; }
 @media (min-width: 860px) {
   .feature { grid-template-columns: 1fr 320px; }
   .feature.flip { grid-template-columns: 320px 1fr; }
