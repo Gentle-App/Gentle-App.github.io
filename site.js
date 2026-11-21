@@ -176,9 +176,9 @@
     // Tapping the dimmed page outside the top bar closes the menu.
     document.addEventListener('click', function (e) { if (root.classList.contains('nav-open') && !e.target.closest('.site-nav')) closeNav(); });
   }
-  // Cookies for the website's analytics: Google Analytics (through Google Tag Manager) and Microsoft Clarity.
-  // UK and EU law needs a yes before these load, so nothing loads until the visitor accepts. The choice is kept in
-  // this browser and can be changed from "Cookie settings" in the footer. The Gentle app itself has no analytics.
+  // The website's analytics: Google Analytics (through Google Tag Manager) and Microsoft Clarity. They load on every
+  // visit (the owner's decision, 21 November 2026). A notice says so on the first visit, and anyone can turn them off,
+  // there or from "Cookie settings" in the footer; that choice is kept in this browser. The Gentle app has no analytics.
   var CONSENT_KEY = 'gentle-cookies';
   var body = document.body;
   var gtmId = body.getAttribute('data-gtm');
@@ -224,7 +224,7 @@
 
   function choose(value) {
     var before = getConsent();
-    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* asked again next visit */ }
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* the notice shows again next visit */ }
     hideBanner();
     if (value === 'granted') {
       loadAnalytics();
@@ -246,12 +246,12 @@
     banner.setAttribute('role', 'region');
     banner.setAttribute('aria-label', 'Cookies');
     banner.innerHTML =
-      '<p><strong>Help me improve Gentle?</strong> It\'s free and made by one person, so seeing which pages people use, ' +
-      'and where they get stuck, is how I know what to fix next. This uses cookies from Google Analytics and Microsoft Clarity, ' +
-      'and only if you say yes. <a href="privacy.html#website">More about this</a></p>' +
+      '<p><strong>Helping me improve Gentle.</strong> It\'s free and made by one person, so this site uses Google Analytics ' +
+      'and Microsoft Clarity, which set cookies, to see which pages people use and where they get stuck. That\'s how I know what ' +
+      'to fix next. You can turn them off whenever you like. <a href="privacy.html#website">More about this</a></p>' +
       '<div class="cookie-actions">' +
-      '<button type="button" class="btn btn-quiet" data-consent="denied">No thanks</button>' +
-      '<button type="button" class="btn btn-quiet" data-consent="granted">Yes, happy to help</button>' +
+      '<button type="button" class="btn btn-quiet" data-consent="denied">Turn them off</button>' +
+      '<button type="button" class="btn btn-quiet" data-consent="granted">OK</button>' +
       '</div>';
     banner.addEventListener('click', function (e) {
       var b = e.target.closest('[data-consent]');
@@ -261,8 +261,8 @@
   }
 
   var choice = getConsent();
-  if (choice === 'granted') loadAnalytics();
-  else if (choice !== 'denied') showBanner();
+  if (choice !== 'denied') loadAnalytics();
+  if (!choice) showBanner();
   var settings = document.getElementById('cookie-settings');
   if (settings) settings.addEventListener('click', function () { showBanner(); var first = banner && banner.querySelector('button'); if (first) first.focus(); });
 })();
