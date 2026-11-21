@@ -101,7 +101,7 @@
   --card-border: 2px solid #2B1B2E;
   --card-shadow: 4px 4px 0 #2B1B2E;
   --button-bg: linear-gradient(180deg, #FF7DBD 0%, #D6247A 60%, #B0105F 100%);
-  --phone-bezel: #2B1B2E;
+  --phone-bezel: #FF9ECF;
   color-scheme: light;
 }
 
@@ -399,7 +399,9 @@ p, li { text-wrap: pretty; }
   position: absolute; top: 3.4cqw; left: 50%; width: 3.8cqw; height: 3.8cqw; margin-left: -1.9cqw; border-radius: 50%;
   background: radial-gradient(circle at 38% 35%, #3B4A52 0 18%, #0A0C0D 30%); box-shadow: 0 0 0 0.5cqw rgba(0, 0, 0, 0.55);
 }
-[data-theme="y2k"] .phone { box-shadow: 0 0 0 3px #2B1B2E, 9px 9px 0 3px #2B1B2E; }
+/* Y2K: a pastel-pink rim with a thin ink outline, like the app's sticker style, even all the way round */
+[data-theme="y2k"] .phone { box-shadow: 0 0 0 3px var(--phone-bezel), 0 0 0 5px #2B1B2E, 0 24px 46px -18px rgba(43, 27, 46, 0.4); }
+[data-theme="y2k"] .phone::before, [data-theme="y2k"] .phone::after { right: -8px; width: 4px; box-shadow: 0 0 0 1.5px #2B1B2E; }
 .phone-caption { text-align: center; font-size: 0.9rem; color: var(--muted); margin-top: 18px; }
 .phone-sm { width: min(250px, 66vw); padding: 10px; border-radius: 36px; }
 .phone-sm .phone-screen { border-radius: 26px; }
@@ -670,7 +672,7 @@ html[data-low="on"] .callout { border: 0; border-left: 5px solid var(--primary);
 html[data-low="on"] .promise-band { border: 0; }
 html[data-low="on"] .theme-menu { background: var(--surface); border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
 html[data-low="on"] .phone { box-shadow: 0 0 0 3px var(--phone-bezel); }
-html[data-low="on"] .phone::before, html[data-low="on"] .phone::after { box-shadow: none; }
+html[data-low="on"] .phone::before, html[data-low="on"] .phone::after { box-shadow: none; right: -6px; width: 3px; }
 html[data-low="on"] main img { filter: saturate(0.4) contrast(0.88) brightness(0.98); }
 html[data-low="on"][data-theme="dark"] main img { filter: saturate(0.4) brightness(0.72); }
 html[data-low="on"] .brand svg { filter: saturate(0.3); }
