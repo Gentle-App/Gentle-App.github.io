@@ -250,8 +250,8 @@
       'and Microsoft Clarity, which set cookies, to see which pages people use and where they get stuck. That\'s how I know what ' +
       'to fix next. You can turn them off whenever you like. <a href="privacy.html#website">More about this</a></p>' +
       '<div class="cookie-actions">' +
-      '<button type="button" class="btn btn-quiet" data-consent="denied">Turn them off</button>' +
-      '<button type="button" class="btn btn-quiet" data-consent="granted">OK</button>' +
+      '<button type="button" class="link-button cookie-off" data-consent="denied">Turn them off</button>' +
+      '<button type="button" class="btn" data-consent="granted">OK</button>' +
       '</div>';
     banner.addEventListener('click', function (e) {
       var b = e.target.closest('[data-consent]');

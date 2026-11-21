@@ -633,8 +633,9 @@ html[data-low="on"] .decor { display: none; }
 }
 [data-theme="y2k"] .cookie-banner { border: 2px solid var(--line); box-shadow: 4px 4px 0 var(--line); }
 .cookie-banner p { flex: 1 1 320px; margin: 0; font-size: 0.94rem; line-height: 1.5; }
-.cookie-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-.cookie-actions .btn { min-height: 44px; padding: 8px 18px; font-size: 0.95rem; }
+.cookie-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.cookie-actions .cookie-off { font-size: 0.82rem; color: var(--muted); min-height: 32px; padding: 0 2px; }
+.cookie-actions .btn { min-height: 44px; padding: 8px 26px; font-size: 0.95rem; }
 .link-button { font: inherit; font-size: inherit; color: var(--primary); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
 html[data-low="on"] .cookie-banner { border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
 
