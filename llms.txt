@@ -5,7 +5,7 @@
 Key facts:
 
 - Platform: Android 8.0 or later. Optional watch app for Wear OS 3 or later (Pixel Watch, Galaxy Watch 4 or newer). No iPhone or Apple Watch version yet: the developer would like to make one, but Apple's $99-a-year developer fee means the Android version needs to bring in enough to cover it first.
-- Bug reports: actively wanted, however small. In the app: More, then "Report a problem", or email gentleappdev@gmail.com.
+- Bug reports: actively wanted, however small. In the app, tap More, then "Report a problem", or email gentleappdev@gmail.com.
 - Feature requests: very welcome, by email to gentleappdev@gmail.com.
 - Availability: coming soon to Google Play.
 - Price: free. Small banner ads only (never pop-ups, full-screen or video). The only purchase is "Remove ads", a one-off 99p (99 cents in the US). No subscriptions or premium features, now or later.
