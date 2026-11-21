@@ -631,18 +631,16 @@ html[data-low="on"] .decor { display: none; }
    right, and a small "Turn them off" link in the bottom-right corner under it, where only the words are clickable. */
 .cookie-banner {
   position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; max-width: 760px; margin: 0 auto;
-  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 18px 34px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 16px 18px;
   background: var(--table-bg); color: var(--ink); border: 1px solid var(--line); border-radius: 18px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
 }
 [data-theme="y2k"] .cookie-banner { border: 2px solid var(--line); box-shadow: 4px 4px 0 var(--line); }
 .cookie-banner p { flex: 1 1 320px; margin: 0; font-size: 0.94rem; line-height: 1.5; }
-.cookie-actions { display: flex; margin-left: auto; }
+/* "OK" with the small "Turn them off" link right under it, the pair centred against the text */
+.cookie-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; margin-left: auto; }
 .cookie-actions .btn { min-height: 44px; padding: 8px 26px; font-size: 0.95rem; }
-.cookie-banner .cookie-off {
-  position: absolute; right: 18px; bottom: 11px; display: inline; min-height: 0; padding: 0; margin: 0;
-  font-size: 0.82rem; line-height: 1.2; color: var(--muted);
-}
+.cookie-banner .cookie-off { min-height: 0; padding: 0; margin: 0; font-size: 0.82rem; line-height: 1.2; color: var(--muted); }
 .link-button { font: inherit; font-size: inherit; color: var(--primary); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
 html[data-low="on"] .cookie-banner { border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
 
