@@ -477,6 +477,7 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .theme-gallery { display: grid; gap: 28px 18px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 860px) { .theme-gallery { grid-template-columns: repeat(3, 1fr); gap: 40px 28px; } }
 .theme-gallery figure { margin: 0; }
+.theme-gallery + p { margin-top: 44px; text-align: center; }
 .theme-gallery .phone { width: min(220px, 100%); padding: 9px; border-radius: 32px; }
 .theme-gallery .phone-screen { border-radius: 23px; }
 .theme-gallery figcaption { text-align: center; margin-top: 10px; font-weight: 700; }
