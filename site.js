@@ -2,13 +2,13 @@
 (function () {
   var root = document.documentElement;
 
-  // The Today screen in each theme. Y2K sparkle and Frutiger Aero use the nearest theme until their own screenshots are added.
+  // The Today screen in each theme.
   var shots = {
     calm: ['img/app/today-light.jpg', 'Light', 'dark'],
     dark: ['img/app/today-dark.jpg', 'Dark', 'light'],
     pink: ['img/app/today-pink.jpg', 'Pink', 'dark'],
-    y2k: ['img/app/today-pink.jpg', 'Pink', 'dark'],
-    aero: ['img/app/today-light.jpg', 'Light', 'dark']
+    y2k: ['img/app/today-y2k.jpg', 'Y2K sparkle', 'dark'],
+    aero: ['img/app/today-aero.jpg', 'Frutiger Aero', 'dark']
   };
   var themeColours = { calm: '#F4F1EA', dark: '#121614', pink: '#FFE6F3', y2k: '#FFE6F2', aero: '#8FD3FF' };
   var lowColours = { light: '#E7E5E0', dark: '#0B0C0C' };

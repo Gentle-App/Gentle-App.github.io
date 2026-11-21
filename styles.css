@@ -405,7 +405,7 @@ p, li { text-wrap: pretty; }
 .phone-sm .phone-screen { border-radius: 26px; }
 
 .shot-slot {
-  margin: 0 auto; width: min(220px, 70vw); aspect-ratio: 600 / 1223; border-radius: 40px; border: 3px dashed var(--line);
+  margin: 0 auto; width: min(220px, 70vw); aspect-ratio: 600 / 1221; border-radius: 40px; border: 3px dashed var(--line);
   display: grid; place-items: center; text-align: center; padding: 20px; color: var(--muted); font-size: 0.95rem; background: var(--surface);
 }
 
@@ -474,9 +474,10 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .crosses li::before { content: "\2715"; position: absolute; left: 2px; color: var(--bad); font-weight: 700; }
 
 /* Theme gallery */
-.theme-gallery { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.theme-gallery { display: grid; gap: 28px 18px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 860px) { .theme-gallery { grid-template-columns: repeat(3, 1fr); gap: 40px 28px; } }
 .theme-gallery figure { margin: 0; }
-.theme-gallery .phone { width: min(210px, 68vw); padding: 9px; border-radius: 32px; }
+.theme-gallery .phone { width: min(220px, 100%); padding: 9px; border-radius: 32px; }
 .theme-gallery .phone-screen { border-radius: 23px; }
 .theme-gallery figcaption { text-align: center; margin-top: 10px; font-weight: 700; }
 .theme-gallery figcaption span { display: block; font-weight: 400; font-size: 0.9rem; color: var(--muted); }
