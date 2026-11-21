@@ -246,11 +246,12 @@
     banner.setAttribute('role', 'region');
     banner.setAttribute('aria-label', 'Cookies');
     banner.innerHTML =
-      '<p>Can this site use cookies from Google Analytics and Microsoft Clarity? They show me which pages people find useful, ' +
-      'and they only load if you say yes. <a href="privacy.html#website">More about this</a></p>' +
+      '<p><strong>Help me improve Gentle?</strong> It\'s free and made by one person, so seeing which pages people use, ' +
+      'and where they get stuck, is how I know what to fix next. This uses cookies from Google Analytics and Microsoft Clarity, ' +
+      'and only if you say yes. <a href="privacy.html#website">More about this</a></p>' +
       '<div class="cookie-actions">' +
       '<button type="button" class="btn btn-quiet" data-consent="denied">No thanks</button>' +
-      '<button type="button" class="btn btn-quiet" data-consent="granted">Yes, that\'s fine</button>' +
+      '<button type="button" class="btn btn-quiet" data-consent="granted">Yes, happy to help</button>' +
       '</div>';
     banner.addEventListener('click', function (e) {
       var b = e.target.closest('[data-consent]');
