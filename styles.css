@@ -443,8 +443,12 @@ p, li { text-wrap: pretty; }
 }
 
 /* Tables: a tinted header row so the table's top edge shows against any section background */
+/* Tables are always solid, even on the glassy Aero theme, so nothing behind shows through */
+:root { --table-bg: var(--surface); }
+[data-theme="aero"] { --table-bg: #F5FBFF; }
+html[data-low="on"] { --table-bg: var(--surface); }
 table {
-  border-collapse: separate; border-spacing: 0; width: 100%; margin: 0; font-size: 0.98rem; background: var(--surface);
+  border-collapse: separate; border-spacing: 0; width: 100%; margin: 0; font-size: 0.98rem; background: var(--table-bg);
   border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
 }
 th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -521,8 +525,10 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .compare thead th:first-child { background: var(--container); }
 .compare th, .compare td { padding: 10px 12px; }
 .compare thead th { background: var(--container); color: var(--on-container); }
-.compare thead th:nth-child(2), .compare td:nth-child(2) { background: color-mix(in srgb, var(--container) 45%, var(--surface)); }
-.compare tbody th { background: var(--surface); font-weight: 700; width: 24%; }
+/* Gentle's column: the same header colour as the others, marked by its coloured text and a line along the top, with a faint tint below */
+.compare thead th:nth-child(2) { color: var(--primary); box-shadow: inset 0 3px 0 var(--primary); }
+.compare td:nth-child(2) { background: color-mix(in srgb, var(--primary) 6%, var(--table-bg)); }
+.compare tbody th { background: var(--table-bg); font-weight: 700; width: 24%; }
 .compare .yes { color: var(--good); font-weight: 700; }
 .compare td.none { color: var(--muted); }
 .compare-note { font-size: 0.9rem; color: var(--muted); }
