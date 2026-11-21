@@ -16,7 +16,7 @@ Key facts:
 
 How it works:
 
-- 100 energy points is the user's own ordinary day, from their last 30 days without a crash. Moving about is 50 points, heart-rate strain 25, thinking, social and sensory effort 25.
+- 100 energy points is the user's own ordinary day, from their last 30 days without a crash. On an ordinary day, moving about uses 50 points, heart-rate strain 25, and thinking, social and sensory effort 25. Each part scales with how much the person did compared with usual: twice their usual steps uses 100 points on movement. Movement can use up to 200 points a day, the other two parts up to 75 each.
 - Each day's allowance is 100 multiplied by morning stability (1 to 5, from sleep, HRV, resting heart rate, symptoms and recent overspending: 0.55 to 1.10) and other factors: 20% off on a crash or PEM day, symptoms worse than usual (5 to 15% off), how the person says they feel, recent crash frequency, and their cycle. Never below 35 points.
 - Pace line: usual resting heart rate plus 15 bpm by default; or 55% of 220 minus age; or a custom number. Alerts say how long you've been over, for example "12 of the last 15 minutes", from waking until usual bedtime.
 - Learns: what comes before the user's crashes (early warning), when payback comes, what busy days really cost, gut and food links, whether part of the menstrual cycle is harder, which rests help.
