@@ -24,7 +24,7 @@ How it works:
 - Works with Health Connect: Google Health (Pixel Watch, Fitbit), Samsung Health, Garmin Connect, Withings, Oura, Polar Flow and Zepp (Amazfit). Also Bluetooth heart-rate straps.
 - Voice notes: say several things at once ("had lunch, then crashed at 3, still in it") and Gentle sorts them into logs; works offline.
 - Report for your doctor: PDF with charts plus spreadsheets.
-- Themes: Light, Dark, Pink, Bubbles, Y2K sparkle, Y2K bling, Frutiger Aero, plus a low-stimulus mode that works on top of any theme.
+- Themes: Light, Dark, Pink, Bubbles, Y2K, Y2K bling, Frutiger Aero, plus a low-stimulus mode that works on top of any theme.
 
 Pages:
 
@@ -38,4 +38,6 @@ Pages:
 - [Watches and Health Connect](https://gentle-app.github.io/works-with-your-watch.html): supported devices and the Wear OS app
 - [Themes](https://gentle-app.github.io/themes.html): themes and low-stimulus mode
 - [Free for good](https://gentle-app.github.io/free-no-subscription.html): no subscriptions, the ads and the 99p, and a comparison with Visible and FatigueSense
+- [Visible membership cost](https://gentle-app.github.io/visible-membership-cost.html): what a Visible membership costs ($19.99 a month in the US, plus Visible's band), what the free Visible app does, and Gentle as a free alternative
+- [FatigueSense subscription](https://gentle-app.github.io/fatiguesense-subscription.html): FatigueSense Plus (£5.99 a month, needed to keep using FatigueSense since November 2026), and Gentle as a free alternative
 - [Privacy](https://gentle-app.github.io/privacy.html): what stays on the phone and the few times data leaves

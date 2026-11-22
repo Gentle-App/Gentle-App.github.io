@@ -1,4 +1,5 @@
-/* Gentle website. The themes match the app's: Calm, Dark, Pink, Y2K sparkle and Frutiger Aero, plus a low-stimulus switch. */
+/* Gentle website. The themes match the app's: Calm, Dark, Pink, Y2K and Frutiger Aero, plus a low-stimulus switch. */
+/* Pink and Y2K headings use Sour Gummy (Google Fonts). It replaced Sniglet, which was too heavy and whose H read as an N. */
 
 :root,
 [data-theme="calm"] {
@@ -65,7 +66,7 @@
   --good: #2FB58A;
   --warn: #E08A1E;
   --bad: #D9365E;
-  --font-head: "Sniglet", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-head: "Sour Gummy", "Atkinson Hyperlegible", system-ui, sans-serif;
   --radius: 28px;
   --card-shadow: 0 6px 18px rgba(255, 46, 147, 0.12);
   --button-bg: linear-gradient(180deg, #FF6FB5 0%, #FF2E93 55%, #E0117F 100%);
@@ -95,7 +96,7 @@
   --good: #1F9E74;
   --warn: #D07A12;
   --bad: #C8234F;
-  --font-head: "Sniglet", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-head: "Sour Gummy", "Atkinson Hyperlegible", system-ui, sans-serif;
   --font-label: "Silkscreen", "Atkinson Hyperlegible", monospace;
   --radius: 18px;
   --card-border: 2px solid #2B1B2E;
@@ -549,6 +550,9 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
 .compare .yes { color: var(--good); font-weight: 700; }
 .compare td.none { color: var(--muted); }
 .compare-note { font-size: 0.9rem; color: var(--muted); }
+/* Two-app tables fit a phone screen without scrolling sideways. */
+.compare.two { min-width: 0; }
+.compare.two tbody th { width: 30%; }
 .compare-hint { display: none; font-size: 0.9rem; color: var(--muted); }
 @media (max-width: 720px) {
   .compare-hint { display: block; }
@@ -562,7 +566,7 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
 .bug-plea h3 { margin-bottom: 0.35em; }
 .bug-plea p:last-child { margin-bottom: 0; }
 
-/* Moving decorations for Y2K sparkle and Frutiger Aero, added by site.js. They follow the app's own but with
+/* Moving decorations for Y2K and Frutiger Aero, added by site.js. They follow the app's own but with
    far fewer pieces, moving slowly, behind everything, and mostly in the margins. Low stimulus hides them; reduced motion
    stills them and drops anything that travels. */
 /* Above section backgrounds, so nothing is half-hidden crossing from one section to the next, but below the content,
