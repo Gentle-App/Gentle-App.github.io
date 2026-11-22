@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sniglet:wght@800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=0dd432d6">
+  <link rel="stylesheet" href="styles.css?v=c99cdfab">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script type="application/ld+json">
@@ -103,7 +103,7 @@
       "name": "Can I put it on my watch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not from here yet. The optional Wear OS watch app isn't available to download, so for now Gentle runs on your phone, with your watch's data coming in through Health Connect."
+        "text": "Yes, if it's a Wear OS watch, such as a Pixel Watch or a Galaxy Watch 4 or newer. The watch app is optional and takes a few extra steps to install, which are above . Without it, Gentle still gets your watch's data through Health Connect."
       }
     },
     {
@@ -216,6 +216,7 @@
       <p class="download-meta">Version 1.0.0 &middot; 51 MB &middot; Android 8.0 or later</p>
     </div>
     <p class="small muted">Open this page on the phone you want Gentle on. On a computer, you can send yourself the link instead: gentle-app.github.io/download.html</p>
+    <p class="small">Have a Wear OS watch? There's an <a href="#watch">optional watch app</a> too.</p>
   </div>
 </header>
 
@@ -235,10 +236,34 @@
   </div>
 </section>
 
-<section>
+<section id="watch">
+  <div class="container narrow">
+    <h2>The watch app (optional)</h2>
+    <p>Gentle works without it, so skip this if you like. But if you have a Wear OS watch, such as a Pixel Watch or a Galaxy Watch 4 or newer, the watch app makes Gentle quicker and more accurate through the day. It reads your heart rate and steps straight from the watch every few minutes, so your points and alerts are up to date instead of waiting an hour or two for your watch's own app to sync. Your wrist buzzes when you go over your pace line, and your points left are on your wrist too.</p>
+    <p>Installing it is fiddlier than the phone app, because watches don't have an "allow unknown apps" switch. You'll need a computer for about ten minutes, or a helper app on your phone. Install Gentle on your phone first.</p>
+    <div class="download-box">
+      <a class="btn btn-quiet" href="https://github.com/Gentle-App/Gentle-App.github.io/releases/latest/download/Gentle-Watch.apk" data-download="watch-apk">Download the watch app</a>
+      <p class="download-meta">Version 1.0.0 &middot; 2.3 MB &middot; Wear OS 3 or later</p>
+    </div>
+    <h3>Installing it from a computer</h3>
+    <ol class="steps">
+      <li>Connect the watch to the same Wi-Fi as your computer.</li>
+      <li>Turn on developer options on the watch. Open Settings, then System, then About (and Versions, if you see it), and tap <strong>Build number</strong> again and again until it says you're a developer. On a Galaxy Watch, it's Settings, then About watch, then Software information, and you tap <strong>Software version</strong>.</li>
+      <li>In Settings, open <strong>Developer options</strong> and switch on <strong>ADB debugging</strong> and <strong>Wireless debugging</strong>. Then tap <strong>Pair new device</strong>. The watch shows a pairing code and an address, something like 192.168.1.20:41234.</li>
+      <li>On your computer, download Google's free <a href="https://developer.android.com/tools/releases/platform-tools">SDK Platform Tools</a>, unzip them, and open a terminal or command prompt in that folder. Type <code>adb pair</code> followed by the address from the watch, and enter the pairing code when it asks.</li>
+      <li>On the watch, go back to the Wireless debugging screen and look for the address under <strong>IP address and port</strong>. It has a different port from the pairing one. On the computer, type <code>adb connect</code> followed by that address.</li>
+      <li>Type <code>adb install</code> followed by the path to the Gentle-Watch.apk file you downloaded. When it says Success, open Gentle on the watch and allow it to read your heart rate and activity, including in the background. It finds Gentle on your phone by itself.</li>
+      <li>Switch Wireless debugging and developer options off again. You won't need them any more.</li>
+    </ol>
+    <h3>Or from your phone</h3>
+    <p>If you'd rather not use a computer, apps on Google Play such as Wear Installer 2 can send an APK to your watch over the same Wireless debugging connection. Do steps 1 to 3 on the watch, then follow the app's instructions to pair and send Gentle-Watch.apk. These apps are made by other people, not by me.</p>
+  </div>
+</section>
+
+<section class="section-alt">
   <div class="container narrow">
     <h2>Getting updates</h2>
-    <p>Apps installed this way don't update themselves. When there's a new version it'll be on this page, so download it and install it over the top in the same way. Your data stays where it is.</p>
+    <p>Apps installed this way don't update themselves. When there's a new version it'll be on this page, so download it and install it over the top in the same way, on your phone and, if you use it, on your watch. Your data stays where it is.</p>
     <p>Once Gentle is on Google Play, you'll find it there instead, and this page will go.</p>
     <div class="bug-plea">
       <p>If something doesn't work, or you get stuck installing it, please tell me. In the app, tap More, then "Report a problem", or email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a> with your phone model and where you got stuck.</p>
@@ -246,7 +271,7 @@
   </div>
 </section>
 
-<section class="section-alt" id="faq">
+<section id="faq">
   <div class="container narrow">
     <h2>Questions about downloading</h2>
     <div class="faq">
@@ -260,7 +285,7 @@
       </details>
       <details class="faq-item">
         <summary>Can I put it on my watch?</summary>
-        <div><p>Not from here yet. The optional Wear OS watch app isn't available to download, so for now Gentle runs on your phone, with your watch's data coming in through Health Connect.</p></div>
+        <div><p>Yes, if it's a Wear OS watch, such as a Pixel Watch or a Galaxy Watch 4 or newer. The watch app is optional and takes a few extra steps to install, which are <a href="#watch">above</a>. Without it, Gentle still gets your watch's data through Health Connect.</p></div>
       </details>
       <details class="faq-item">
         <summary>Does it cost anything?</summary>
@@ -325,6 +350,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=0dd432d6" defer></script>
+<script src="site.js?v=c99cdfab" defer></script>
 </body>
 </html>
