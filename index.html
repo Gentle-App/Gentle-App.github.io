@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sniglet:wght@800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=b0784a83">
+  <link rel="stylesheet" href="styles.css?v=0dd432d6">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script type="application/ld+json">
@@ -55,6 +55,8 @@
   "operatingSystem": "Android 8.0 or later; Wear OS 3 or later for the optional watch app",
   "applicationCategory": "HealthApplication",
   "isAccessibleForFree": true,
+  "softwareVersion": "1.0.0",
+  "downloadUrl": "https://github.com/Gentle-App/Gentle-App.github.io/releases/latest/download/Gentle.apk",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -62,7 +64,8 @@
   },
   "author": {
     "@type": "Person",
-    "name": "The developer of Gentle",
+    "name": "Ben Robart",
+    "url": "https://benrobart.github.io/",
     "email": "gentleappdev@gmail.com"
   },
   "screenshot": [
@@ -212,6 +215,7 @@
       <li><a href="themes.html">Themes</a></li>
       <li><a href="free-no-subscription.html">Free for good</a></li>
       <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="download.html" class="nav-download">Download</a></li>
     </ul>
     <div class="nav-actions">
       <div class="theme-picker">
@@ -246,10 +250,10 @@
       <h1>Today's energy, <span class="accent">counted for you</span></h1>
       <p class="lede">Gentle takes what your watch already records, adds a few taps from you, and works out how much energy you have for the day. It counts down as you go, tells you when your heart rate has been high for a while, and over time it learns what tends to happen before you crash.</p>
       <div class="hero-actions">
-        <a class="btn" href="#get-it" aria-disabled="true">Coming soon to Google Play</a>
+        <a class="btn" href="download.html">Download for Android</a>
         <a class="btn btn-quiet" href="energy-pacing-app.html">See how the points work</a>
       </div>
-      <p class="hero-note">Free, with no subscription. Needs Android 8.0 or later. Works with Pixel Watch, Fitbit, Samsung, Garmin and others through Health Connect, or with no watch at all.</p>
+      <p class="hero-note">Free, with no subscription, and coming to Google Play soon. Needs Android 8.0 or later. Works with Pixel Watch, Fitbit, Samsung, Garmin and others through Health Connect, or with no watch at all.</p>
     </div>
     <figure>
       <div class="phone" data-ink="dark"><div class="phone-screen"><img data-shot="today" src="img/app/today-aero.jpg?v=d798009a" data-v="d798009a" width="600" height="1221" alt="Gentle's Today screen: 36 points left of 99 today, stability 5 out of 5, and the day so far in steps and heart rate"><div class="phone-status" aria-hidden="true"><span>2:50</span><span class="phone-icons"><svg viewBox="0 0 12 12"><path d="M12 0V12H0Z"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.6 0.4 3.7a10.8 10.8 0 0 1 15.2 0Z"/></svg><svg viewBox="0 0 8 13"><rect x="2.5" width="3" height="2" rx=".6"/><rect y="1.4" width="8" height="11.6" rx="1.7"/></svg></span></div><span class="phone-camera" aria-hidden="true"></span></div></div>
@@ -359,8 +363,8 @@
 <section class="section-alt" id="get-it">
   <div class="container narrow">
     <h2>Getting Gentle</h2>
-    <p>Gentle is coming to Google Play. It needs an Android phone with Android 8.0 or later, and the optional watch app needs Wear OS 3 or later. There's no iPhone version yet, and the questions below say why.</p>
-    <p>If you'd like to try it before then, or you have a question, email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a>.</p>
+    <p>Gentle is coming to Google Play. Until it's there, you can <a href="download.html">download it here</a>, with step-by-step help to install it. It needs an Android phone with Android 8.0 or later. There's no iPhone version yet, and the <a href="#faq">FAQ</a> explains why.</p>
+    <p>If you have a question, email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a>.</p>
     <div class="bug-plea" id="bugs">
       <h3>Bugs and ideas are always welcome</h3>
       <p>If anything looks wrong, I want to hear about it, even if it's a typo or a number that seems a bit off. I can't test Gentle on every phone, so your report is often the only way I'll find out. In the app, tap More, then "Report a problem". Gentle fills in the technical details for you, and you can read the report before it's sent. Or email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a>.</p>
@@ -427,12 +431,13 @@
   <div class="container footer-grid">
     <div>
       <a href="index.html" class="brand brand-footer"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
-      <p>A pacing app for anyone who has to manage limited energy, made by one person.</p>
+      <p>A pacing app for anyone who has to manage limited energy, created by <a href="https://benrobart.github.io/">Ben Robart</a>.</p>
       <p>Found a bug, even a tiny one, or have an idea for a new feature? Please tell me: <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a></p>
     </div>
     <div>
       <h2 class="footer-head">Pages</h2>
       <ul class="footer-links">
+        <li><a href="download.html">Download</a></li>
         <li><a href="energy-pacing-app.html">How the points work</a></li>
         <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
         <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
@@ -453,6 +458,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=b0784a83" defer></script>
+<script src="site.js?v=0dd432d6" defer></script>
 </body>
 </html>

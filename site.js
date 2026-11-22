@@ -258,6 +258,18 @@
     body.appendChild(banner);
   }
 
+  // Download taps: Google Analytics (through Tag Manager) and Clarity each get an "apk_download" event. GitHub also counts
+  // every download of the file itself, which website/scripts/downloads.py reads.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-download]');
+    if (!a || !loaded) return;
+    var file = a.getAttribute('data-download');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'apk_download', download_file: file, download_page: location.pathname });
+    if (window.gtag) window.gtag('event', 'apk_download', { download_file: file, transport_type: 'beacon' });
+    if (window.clarity) window.clarity('event', 'apk_download');
+  });
+
   var choice = getConsent();
   if (choice !== 'denied') loadAnalytics();
   if (!choice) showBanner();

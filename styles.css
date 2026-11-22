@@ -524,6 +524,15 @@ thead th { background: var(--container); color: var(--on-container); font-weight
 .footer-small { margin-top: 18px; font-size: 0.86rem; color: var(--muted); }
 .brand-footer svg { width: 32px; height: 32px; }
 
+/* Download page and the top bar's Download link */
+.download-box { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 22px 0 18px; }
+.btn-big { min-height: 56px; padding: 14px 30px; font-size: 1.1rem; }
+.download-meta { margin: 0; font-size: 0.92rem; color: var(--muted); }
+.nav-links a.nav-download { background: var(--button-bg); color: var(--on-primary); font-weight: 700; border-radius: 999px; padding: 0 16px; margin-left: 4px; }
+.nav-links a.nav-download:hover, .nav-links a.nav-download[aria-current="page"] { background: var(--button-bg); filter: brightness(1.06); }
+[data-theme="y2k"] .nav-links a.nav-download { border: 2px solid var(--line); }
+@media (max-width: 979px) { .nav-open .nav-links a.nav-download { justify-content: center; margin: 6px 0 2px; } }
+
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Comparison table: the first column stays put while the rest scrolls sideways on a phone */
