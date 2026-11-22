@@ -1,5 +1,5 @@
 /* Gentle website. The themes match the app's: Calm, Dark, Pink, Y2K and Frutiger Aero, plus a low-stimulus switch. */
-/* Pink and Y2K headings use Sour Gummy (Google Fonts). It replaced Sniglet, which was too heavy and whose H read as an N. */
+/* Pink and Y2K headings, and the "Gentle" name in the header and footer, use Sour Gummy (Google Fonts). It replaced Sniglet: too heavy, and its H read as an N. */
 
 :root,
 [data-theme="calm"] {
@@ -144,13 +144,15 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background-color: var(--bg);
-  background-image: var(--bg-image);
-  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.6;
 }
+
+/* The theme's sky or pattern sits on its own fixed layer. A "background-attachment: fixed" body made phones repaint the
+   whole background on every scroll frame, which made Frutiger Aero judder. */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: var(--bg-image); pointer-events: none; }
 
 img { max-width: 100%; height: auto; display: block; }
 figure { margin: 0; min-width: 0; }
@@ -571,8 +573,10 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
    stills them and drops anything that travels. */
 /* Above section backgrounds, so nothing is half-hidden crossing from one section to the next, but below the content,
    which sits in .container at z-index 1. */
-.decor { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.decor > span { position: absolute; display: block; }
+.decor { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; contain: strict; }
+/* Each moving piece gets its own layer, so its movement doesn't make the page underneath redraw. */
+.decor > span, .decor-aero .bubble > span, .decor-y2k .fly-bob { position: absolute; display: block; will-change: transform, opacity; }
+.decor-aero .bubble > span, .decor-y2k .fly-bob { position: static; }
 .decor svg { display: block; width: 100%; height: 100%; overflow: visible; }
 
 /* Y2K: a holographic sheen, twinkling glitter and sparkles, puffy stickers and two butterflies */
@@ -637,6 +641,13 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
 /* On a phone the text fills the width, so only the small things stay. */
 @media (max-width: 760px) {
   .decor .sticker, .decor .fly { display: none; }
+}
+/* Frosted glass over moving clouds and bubbles is too much work for a phone while scrolling, so on touch screens and
+   narrow windows Frutiger Aero's cards and top bar are a little more solid and unblurred instead. */
+@media (hover: none), (max-width: 760px) {
+  [data-theme="aero"] { --blur: none; --surface: rgba(255, 255, 255, 0.9); --surface-2: rgba(227, 243, 253, 0.95); }
+  [data-theme="aero"] .site-nav { background: rgba(232, 246, 255, 0.96); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .decor-aero .cloud { filter: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .decor *, .decor *::before, .decor *::after { animation: none !important; }

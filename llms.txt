@@ -9,7 +9,7 @@ Key facts:
 - Feature requests: very welcome, by email to gentleappdev@gmail.com.
 - Availability: coming to Google Play. Until then, the Android app (APK) can be downloaded from https://gentle-app.github.io/download.html, which has step-by-step install help.
 - Price: free. Small banner ads only (never pop-ups, full-screen or video). The only purchase is "Remove ads", a one-off 99p (99 cents in the US). No subscriptions or premium features, now or later.
-- Privacy: all data is stored on the phone and not shared with anyone, including the developer. The exception is a bug report the user chooses to send with their data included; that data is used only to fix the problem, deleted once it's fixed, and never passed on. Optional online AI helper sends the user's question and a data summary to the provider they choose, only if they set it up with their own key.
+- Privacy: all data is stored on the phone and not shared with anyone, including the developer. The exception is a bug report the user chooses to send with their data included; that data is used only to fix the problem, deleted once it's fixed, and never passed on. Optional online AI helper sends the user's question and a data summary to the provider they choose, only if they set it up with their own key. From version 1.0.1 the app sends one anonymous daily count to the developer (no ID and no health data: the date, app version, days used in the last 30, and the previous day's minutes in the app and screens opened), which can be turned off in Settings → Privacy. Website downloads are counted by time and file only.
 - Contact: gentleappdev@gmail.com
 - Made by: one person, not a company.
 - Not a medical device; doesn't diagnose or treat anything.

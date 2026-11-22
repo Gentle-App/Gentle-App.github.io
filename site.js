@@ -63,9 +63,11 @@
       for (i = 0; i < 6; i++) piece(layer, 'sticker', i % 2 ? HEART : STAR, 'left:' + edge() + '%;top:' + (10 + r() * 80) + '%;--s:' + (24 + r() * 18) + 'px;--c:' + PASTELS[i % 6] + ';--d:' + (7 + r() * 5) + 's;--delay:-' + r() * 10 + 's');
       for (i = 0; i < 2; i++) piece(layer, 'fly', '<span class="fly-bob">' + FLY + '</span>', 'top:' + (18 + r() * 60) + '%;--d:' + (80 + r() * 30) + 's;--delay:-' + r() * 90 + 's;--a:' + PASTELS[i * 2] + ';--b:' + PASTELS[i * 2 + 1]);
     } else {
+      // Phones get fewer glows and bubbles, so scrolling stays smooth.
+      var small = window.matchMedia('(max-width: 760px), (hover: none)').matches;
       for (i = 0; i < 3; i++) piece(layer, 'cloud', cloudSvg(i), 'top:' + (6 + i * 9 + r() * 6) + '%;--s:' + (170 + r() * 110) + 'px;--d:' + (150 + r() * 80) + 's;--delay:-' + (i * 70 + r() * 40) + 's');
-      for (i = 0; i < 7; i++) piece(layer, 'bokeh', '', 'left:' + r() * 100 + '%;top:' + (12 + r() * 70) + '%;--s:' + (40 + r() * 90) + 'px;--d:' + (9 + r() * 6) + 's;--delay:-' + r() * 12 + 's');
-      for (i = 0; i < 11; i++) piece(layer, 'bubble', '<span></span>', 'left:' + r() * 100 + '%;--s:' + (14 + r() * 44) + 'px;--d:' + (50 + r() * 40) + 's;--delay:-' + r() * 90 + 's;--sway:' + (5 + r() * 4) + 's');
+      for (i = 0; i < (small ? 4 : 7); i++) piece(layer, 'bokeh', '', 'left:' + r() * 100 + '%;top:' + (12 + r() * 70) + '%;--s:' + (40 + r() * 90) + 'px;--d:' + (9 + r() * 6) + 's;--delay:-' + r() * 12 + 's');
+      for (i = 0; i < (small ? 6 : 11); i++) piece(layer, 'bubble', '<span></span>', 'left:' + r() * 100 + '%;--s:' + (14 + r() * 44) + 'px;--d:' + (50 + r() * 40) + 's;--delay:-' + r() * 90 + 's;--sway:' + (5 + r() * 4) + 's');
     }
     document.body.insertBefore(layer, document.body.firstChild);
   }
@@ -154,6 +156,23 @@
     });
   });
   document.addEventListener('click', function (e) { if (!e.target.closest('.has-sub')) closeSubs(); });
+  // With a mouse, an open dropdown closes once the pointer has left it. The short pause stops it shutting while the
+  // pointer crosses the gap between the button and the list. The phone menu is left alone.
+  document.querySelectorAll('.has-sub').forEach(function (li) {
+    var timer;
+    li.addEventListener('pointerleave', function (e) {
+      if (e.pointerType !== 'mouse' || root.classList.contains('nav-open')) return;
+      timer = setTimeout(function () {
+        var b = li.querySelector('.sub-toggle');
+        if (b.getAttribute('aria-expanded') !== 'true') return;
+        b.setAttribute('aria-expanded', 'false');
+        document.getElementById(b.getAttribute('aria-controls')).hidden = true;
+      }, 350);
+    });
+    li.addEventListener('pointerenter', function () { clearTimeout(timer); });
+  });
+  // A ctrl-, shift-, cmd- or middle-click opens the link in a new tab or window, so the menu stays as it was.
+  function newTabClick(e) { return e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1; }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeMenu(); closeNav(); closeSubs(); } });
 
   // Mobile menu
@@ -172,13 +191,13 @@
       if (here) { here.setAttribute('aria-expanded', 'true'); document.getElementById(here.getAttribute('aria-controls')).hidden = false; }
       if (!open) closeSubs();
     });
-    navLinks.addEventListener('click', function (e) { if (e.target.closest('a')) closeNav(); });
+    navLinks.addEventListener('click', function (e) { if (e.target.closest('a') && !newTabClick(e)) closeNav(); });
     // Tapping the dimmed page outside the top bar closes the menu.
     document.addEventListener('click', function (e) { if (root.classList.contains('nav-open') && !e.target.closest('.site-nav')) closeNav(); });
   }
   // The website's analytics: Google Analytics (through Google Tag Manager) and Microsoft Clarity. They load on every
   // visit (the owner's decision, 21 November 2026). A notice says so on the first visit, and anyone can turn them off,
-  // there or from "Cookie settings" in the footer; that choice is kept in this browser. The Gentle app has no analytics.
+  // there or from "Cookie settings" in the footer; that choice is kept in this browser. The app has its own anonymous daily count (count-worker/), described on the privacy page.
   var CONSENT_KEY = 'gentle-cookies';
   var body = document.body;
   var gtmId = body.getAttribute('data-gtm');

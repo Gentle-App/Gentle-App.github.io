@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy: Your Data Stays on Your Phone | Gentle</title>
-  <meta name="description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <title>Privacy: Your Health Data Stays on Your Phone | Gentle</title>
+  <meta name="description" content="Gentle keeps your health data on your phone and shares it with no one, its developer included. What it reads, its anonymous daily count, and when data leaves.">
   <link rel="canonical" href="https://gentle-app.github.io/privacy.html">
   <meta name="theme-color" content="#FFE6F3">
 
   <meta property="og:site_name" content="Gentle">
-  <meta property="og:title" content="Privacy: Your Data Stays on Your Phone | Gentle">
-  <meta property="og:description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <meta property="og:title" content="Privacy: Your Health Data Stays on Your Phone | Gentle">
+  <meta property="og:description" content="Gentle keeps your health data on your phone and shares it with no one, its developer included. What it reads, its anonymous daily count, and when data leaves.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gentle-app.github.io/privacy.html">
   <meta property="og:locale" content="en_GB">
@@ -19,8 +19,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Gentle, a free energy pacing app, showing today's energy points">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Privacy: Your Data Stays on Your Phone | Gentle">
-  <meta name="twitter:description" content="Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.">
+  <meta name="twitter:title" content="Privacy: Your Health Data Stays on Your Phone | Gentle">
+  <meta name="twitter:description" content="Gentle keeps your health data on your phone and shares it with no one, its developer included. What it reads, its anonymous daily count, and when data leaves.">
   <meta name="twitter:image" content="https://gentle-app.github.io/og-image.png">
 
   <script>
@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sour+Gummy:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2680cafd">
+  <link rel="stylesheet" href="styles.css?v=292d97d4">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script type="application/ld+json">
@@ -68,8 +68,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Privacy: Your Data Stays on Your Phone",
-  "description": "Gentle stores everything on your phone and shares it with no one, its developer included. What it reads, what it never sends, and the few times data leaves.",
+  "name": "Privacy: Your Health Data Stays on Your Phone",
+  "description": "Gentle keeps your health data on your phone and shares it with no one, its developer included. What it reads, its anonymous daily count, and when data leaves.",
   "url": "https://gentle-app.github.io/privacy.html",
   "about": {
     "@id": "https://gentle-app.github.io/#app"
@@ -168,9 +168,9 @@
 <header class="hero">
   <div class="container narrow">
     <p class="eyebrow">Privacy</p>
-    <h1>Your data stays on your phone</h1>
-    <p class="lede">Everything you log in Gentle, and everything it reads from your watch, is stored on your phone. It isn't sent to me or to anyone else. There's no Gentle account, and no Gentle server to send it to.</p>
-    <p class="small muted">Last updated 21 November 2026.</p>
+    <h1>Your health data stays on your phone</h1>
+    <p class="lede">Everything you log in Gentle, and everything it reads from your watch, is stored on your phone. It isn't sent to me or to anyone else, and there's no Gentle account. The one thing the app sends me is an anonymous daily count, explained below, and you can turn that off.</p>
+    <p class="small muted">Last updated 22 November 2026.</p>
   </div>
 </header>
 
@@ -181,7 +181,7 @@
       <li>Your health data is stored on your phone and never shared with anyone, me included.</li>
       <li>The only time I see any of it is if you send me a bug report and choose to include your data. I use it to fix the problem, delete it once the bug is fixed, and never pass it to anyone else.</li>
       <li>Gentle reads from Health Connect and never writes to it.</li>
-      <li>There's no analytics or tracking inside the app.</li>
+      <li>Once a day, the app sends an anonymous count so I can see how many people use Gentle and which parts. It has no ID and none of your health data, and you can turn it off.</li>
       <li>The ads never get your health data.</li>
     </ul>
   </div>
@@ -204,7 +204,12 @@
 <section>
   <div class="container narrow">
     <h2>When anything leaves your phone</h2>
-    <p>Only in these cases, and only when you choose.</p>
+    <p>Only in these cases.</p>
+    <h3>The anonymous daily count</h3>
+    <p>The first time you open Gentle each day, it sends one small message to a counter I run on Cloudflare. It says the date, which version of Gentle you have, on how many of the last 30 days you opened it, and, for the last day you used it, how many minutes it was open and which screens you opened, such as Today or Food.</p>
+    <p>The message has no ID in it, and nothing you've logged or anything from your watch. The counter adds it to daily totals and doesn't keep the message itself or your IP address. Cloudflare carries the message under its own privacy policy. To stop it, go to Settings, then Privacy, and turn off "Send an anonymous daily count".</p>
+    <h3>Checking for new versions</h3>
+    <p>Once a day, Gentle asks the same counter which version is the newest, so Today can tell you when there's a new one to download. The request carries nothing about you, and nothing is counted. You can turn it off in Settings, under Privacy, with "Tell me when there's a new version".</p>
     <h3>Bug reports</h3>
     <p>Please send one whenever something seems wrong, however small. In the app, tap More, then "Report a problem", and Gentle builds a report you can read before sending. It can include technical details, today's energy figures, your notes, recent voice notes and a copy of your Gentle data, and each of those has its own switch. They all start switched on, because the more I can see, the faster I can fix the problem, so switch off anything you'd rather not send. Your AI key is never included.</p>
     <p>The report goes from your own email app to gentleappdev@gmail.com. I only use it to find and fix the problem, I delete it once the bug is fixed, and it's never passed to anyone else.</p>
@@ -232,15 +237,15 @@
           <tr><td>Camera</td><td>Measuring HRV with your fingertip over the camera. The picture is analysed on your phone and not saved.</td></tr>
           <tr><td>Bluetooth</td><td>Connecting a heart-rate chest strap or armband, if you use one.</td></tr>
           <tr><td>Location</td><td>Only on older versions of Android, which need it to scan for Bluetooth devices. Gentle doesn't use your location.</td></tr>
-          <tr><td>Internet</td><td>Downloading the on-phone AI model, the online AI helper if you set one up, and the ads.</td></tr>
+          <tr><td>Internet</td><td>The anonymous daily count, checking for a new version, downloading the on-phone AI model, the online AI helper if you set one up, and the ads.</td></tr>
         </tbody>
       </table>
     </div>
 
     <h2 id="website">This website</h2>
-    <p>None of this section is about the app, which has no analytics. It's only about this website.</p>
+    <p>This section is only about this website. The app's anonymous daily count is explained above.</p>
     <p>The website uses Google Analytics (through Google Tag Manager) and Microsoft Clarity, which show me which pages people read and where they get stuck. They set cookies and collect things like the pages you visit, your browser and device, roughly where you are, and, for Clarity, how you scroll and click. Google and Microsoft handle this data under their own privacy policies.</p>
-    <p>The Download button gets the app from GitHub, which handles that request under its own privacy policy. GitHub counts how many times the file is downloaded, and if Google Analytics and Clarity are on, they note that the button was tapped.</p>
+    <p>The Download buttons go through the same Cloudflare counter, which notes the date and time and which file, then sends you on to GitHub for the download. Nothing else about you is kept. GitHub handles the download under its own privacy policy and counts how many times each file is downloaded. If Google Analytics and Clarity are on, they note that the button was tapped.</p>
     <p>It also uses Cloudflare Web Analytics, which counts visits without cookies and without storing anything on your device. It only sees things like which page was visited, the browser and device type, and roughly which country you're in.</p>
     <p>You can turn them off whenever you like, from the notice on your first visit or with "Cookie settings" at the bottom of every page. Turning them off removes their cookies, and they won't load again in that browser. Your choice, and the theme you pick, are saved in your own browser.</p>
 
@@ -264,7 +269,7 @@
 <section class="promise-band" aria-label="The promise">
   <div class="container promise-inner">
     <p class="promise-head">Free, and it'll stay free</p>
-    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your data stays on your phone, and nobody else gets it, me included.</p>
+    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your health data stays on your phone, and nobody else gets it, me included.</p>
     <p class="promise-links"><a href="free-no-subscription.html">Why it's free</a> &middot; <a href="privacy.html">Privacy</a></p>
   </div>
 </section>
@@ -292,6 +297,7 @@
         <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
         <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
         <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
       </ul>
     </div>
   </div>
@@ -302,6 +308,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=2680cafd" defer></script>
+<script src="site.js?v=292d97d4" defer></script>
 </body>
 </html>

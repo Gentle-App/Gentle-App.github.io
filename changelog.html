@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="pink">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gentle Changelog: What's New in Each Version</title>
+  <meta name="description" content="Every change to Gentle, the free pacing app for Android, and its Wear OS watch app, back to the first version on 27 October 2026.">
+  <link rel="canonical" href="https://gentle-app.github.io/changelog.html">
+  <meta name="theme-color" content="#FFE6F3">
+
+  <meta property="og:site_name" content="Gentle">
+  <meta property="og:title" content="Gentle Changelog: What&#x27;s New in Each Version">
+  <meta property="og:description" content="Every change to Gentle, the free pacing app for Android, and its Wear OS watch app, back to the first version on 27 October 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gentle-app.github.io/changelog.html">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://gentle-app.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gentle, a free energy pacing app, showing today's energy points">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gentle Changelog: What&#x27;s New in Each Version">
+  <meta name="twitter:description" content="Every change to Gentle, the free pacing app for Android, and its Wear OS watch app, back to the first version on 27 October 2026.">
+  <meta name="twitter:image" content="https://gentle-app.github.io/og-image.png">
+
+  <script>
+    // Set the theme and low-stimulus mode before anything draws, so there's no flash of the wrong look.
+    (function () {
+      var d = document.documentElement, t = null, low = null;
+      try {
+        t = localStorage.getItem('gentle-theme');
+        low = localStorage.getItem('gentle-low');
+        // Low stimulus used to be one of the themes; it's a separate switch now.
+        if (t === 'low') { t = 'dark'; low = 'on'; localStorage.setItem('gentle-theme', t); localStorage.setItem('gentle-low', low); }
+      } catch (e) {}
+      if (!t) t = 'pink'; // Pink is the site's default look
+      d.setAttribute('data-theme', t);
+      if (low === 'on') d.setAttribute('data-low', 'on');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sour+Gummy:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=292d97d4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Gentle",
+      "item": "https://gentle-app.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Changelog",
+      "item": "https://gentle-app.github.io/changelog.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Gentle Changelog: What's New in Each Version",
+  "description": "Every change to Gentle, the free pacing app for Android, and its Wear OS watch app, back to the first version on 27 October 2026.",
+  "url": "https://gentle-app.github.io/changelog.html",
+  "about": {
+    "@id": "https://gentle-app.github.io/#app"
+  },
+  "dateModified": "2026-11-22"
+}
+  </script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7fb1e376e5f4f01a6a2b616ecb05672"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-gtm="GTM-W98S7TCZ" data-clarity="zh57ubybxy">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="hg" x1="40" y1="30" x2="66" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8ACB"/><stop offset=".45" stop-color="#FF2E93"/><stop offset="1" stop-color="#C2006B"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="38" y1="34" x2="44" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+    <symbol id="heart" viewBox="0 0 108 108">
+      <g transform="translate(0 4)">
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="url(#hg)"/>
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6"/>
+        <path d="M35,41 C35,36 39,33.5 43,33.5 C46.5,33.5 49,35.5 50.5,38.5 C46,38 40,40 37,45 C35.8,44.2 35,42.8 35,41 Z" fill="url(#hs)"/>
+        <circle cx="70.5" cy="38" r="2.2" fill="#fff" fill-opacity=".8"/>
+      </g>
+      <path d="M81,25 L82.4,29.6 L87,31 L82.4,32.4 L81,37 L79.6,32.4 L75,31 L79.6,29.6 Z" fill="#fff"/>
+      <path d="M28,62 L29,65 L32,66 L29,67 L28,70 L27,67 L24,66 L27,65 Z" fill="#FFE48A"/>
+    </symbol>
+  </defs>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-0">How it works</button>
+        <ul class="sub" id="sub-0" hidden>
+          <li><a href="energy-pacing-app.html">How the points work</a></li>
+          <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+          <li><a href="crash-pem-tracker.html">Crashes and PEM</a></li>
+          <li><a href="bowel-movement-tracker.html">Gut and food</a></li>
+          <li><a href="works-with-your-watch.html">Watches</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-1">Who it&#x27;s for</button>
+        <ul class="sub" id="sub-1" hidden>
+          <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+          <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD</a></li>
+          <li><a href="index.html#who">Any energy-limiting condition</a></li>
+        </ul>
+      </li>
+      <li><a href="themes.html">Themes</a></li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-3">Free for good</button>
+        <ul class="sub" id="sub-3" hidden>
+          <li><a href="free-no-subscription.html">Why it&#x27;s free</a></li>
+          <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+          <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        </ul>
+      </li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="download.html" class="nav-download">Download</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="theme-picker">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="palette" viewBox="0 0 24 24" aria-hidden="true"><path class="rim" d="M12 2.8c-5.1 0-9.2 3.9-9.2 8.9 0 5 4 9.5 9 9.5 1.2 0 1.9-.8 1.9-1.8 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8h2.1c2.7 0 4.9-2.2 4.9-4.9 0-4.3-4.2-7.3-9.5-7.3Z"/><circle class="d1" cx="7.4" cy="11.8" r="1.7"/><circle class="d2" cx="10.3" cy="7.4" r="1.7"/><circle class="d3" cx="15.1" cy="7.7" r="1.7"/></svg><span class="theme-label">Theme</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" hidden>
+          <p class="theme-menu-title" id="theme-menu-title">The app's themes</p>
+          <div role="radiogroup" aria-labelledby="theme-menu-title">
+            <button type="button" data-set-theme="calm" role="radio" aria-checked="false"><span class="swatch swatch-calm"></span><span>Calm</span></button>
+            <button type="button" data-set-theme="dark" role="radio" aria-checked="false"><span class="swatch swatch-dark"></span><span>Dark</span></button>
+            <button type="button" data-set-theme="pink" role="radio" aria-checked="false"><span class="swatch swatch-pink"></span><span>Pink</span></button>
+            <button type="button" data-set-theme="y2k" role="radio" aria-checked="false"><span class="swatch swatch-y2k"></span><span>Y2K</span></button>
+            <button type="button" data-set-theme="aero" role="radio" aria-checked="false"><span class="swatch swatch-aero"></span><span>Frutiger Aero</span></button>
+          </div>
+          <div class="theme-menu-divider"></div>
+          <button type="button" class="low-toggle" id="low-toggle" role="switch" aria-checked="false">
+            <span class="low-text"><span>Low stimulus</span><span class="low-hint">Dim, muted and still, on any theme</span></span><span class="switch" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span class="burger" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <nav aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Changelog</li></ol></nav>
+</div>
+<main id="main">
+<header class="hero">
+  <div class="container narrow">
+    <p class="eyebrow">Changelog</p>
+    <h1>What's new in Gentle</h1>
+    <p class="lede">I've listed every change to Gentle here, newest first, back to the first version, which went on the phone of someone close to me on 27 October 2026. If you want to know why something changed, email me at <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a> and I'll explain.</p>
+    <p class="small muted">Times are UK time. To update, download the new version from the <a href="download.html">download page</a> and install it over the top, and your data stays where it is. Since 31 October, whenever I've changed how the numbers are worked out, there's been a switch in Settings to go back to the old way.</p>
+  </div>
+</header>
+
+<section id="v1-0-1">
+  <div class="container narrow">
+    <h2>Version 1.0.1</h2>
+    <p class="small muted">Phone app, 22 November 2026, 5:36pm. The watch app is still 1.0.0.</p>
+    <ul>
+      <li>The first time you open Gentle each day, it now sends me an anonymous count, so I can see how many people use it, how often, for how long and which parts. The count holds the date, your version of Gentle and how many of the last 30 days you opened it. For the last day you used it, it also says how many minutes Gentle was open and which screens you opened, by name, such as Today or Food. There's no ID in it, and nothing you've logged or anything from your watch.</li>
+      <li>You can turn the count off in Settings, under Privacy, with "Send an anonymous daily count". Once it's off, nothing is sent and Gentle stops keeping track for it.</li>
+      <li>What the count keeps on your phone is stored separately, so it never goes into a backup, an export or a problem report.</li>
+      <li>Gentle checks once a day whether there's a newer version, and Today shows a note with a link to the download page when there is. The check sends nothing about you, and you can turn it off in Settings, under Privacy, with "Tell me when there's a new version". Settings also has a "Check for a new version" button, and shows which version you have.</li>
+      <li>The Privacy screen explains the count and the version check, and Help has a new article, "What's the anonymous daily count?".</li>
+      <li>Points, allowances and alerts work exactly as they did in 1.0.0.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-alt" id="v1-0-0">
+  <div class="container narrow">
+    <h2>Version 1.0.0</h2>
+    <p class="small muted">Phone app and watch app, 22 November 2026, 3:23pm.</p>
+    <p>The first version anyone could download, from this website. It has every change from the test versions below. The watch app came out at the same time, as its own download.</p>
+  </div>
+</section>
+
+<section id="testing">
+  <div class="container narrow">
+    <h2>Before 1.0.0: the test versions</h2>
+    <p>From 27 October to 21 November 2026, Gentle was only on one phone, and I put a new test version on it most days. These are the changes in each one.</p>
+
+    <h3>21 November 2026, 3:12am</h3>
+    <ul>
+      <li>In Settings, under Look and feel, Y2K sparkle and Frutiger Aero each show as one choice, with a Version switch underneath for V1, V2 and V3. Picking a look chooses its newest version, and a theme you'd already picked stays as it was.</li>
+      <li>A row of choices no longer jumps onto a new line when you pick one. The chosen one turns bold, which used to make it wider.</li>
+      <li>The sample data has a month of bowel movements, two weeks of food and three foods you can't eat, so those screens have something in them when you're trying the app out.</li>
+    </ul>
+
+    <h3>21 November 2026, 2:31am</h3>
+    <ul>
+      <li>You can manage your foods you can't eat by voice. "I can't eat dairy", "spicy food gives me diarrhoea", "sweetcorn goes straight through me" or "add popcorn to my foods I can't eat" adds one, and "I can eat bread again" or "take onions off my list" takes one off.</li>
+      <li>Gentle picks up what the food does to you and how bad it is from what you say, and asks if you didn't say. If the food's already on your list, it adds to that entry.</li>
+      <li>It leaves alone things like "I can't eat anything today", "I can't have visitors" or "the curry didn't agree with me last night", and questions.</li>
+      <li>The AI helper can add a food too, but only when what you said sounds like one.</li>
+    </ul>
+
+    <h3>21 November 2026, 2:21am</h3>
+    <ul>
+      <li>Log, then Bowel movements, then How often has a chart with a bar for each day over two weeks, 30 days or 90 days. Each bar is split by Bristol type into hard, typical, soft, loose and type not given, in your theme's colours, and a dashed line shows the average.</li>
+      <li>On the chart, a small ring marks a day you said you hadn't been. A day with nothing logged is left empty, because it's unknown, and a red dot marks a day with blood noted. Tap a day to open it, and the line underneath gives the average, the most in a day and how many days had loose ones.</li>
+      <li>The report for your doctor has the same chart in its bowel section.</li>
+      <li>Food and drink has a list of foods you can't eat. For each one you can say what it does (diarrhoea, urgency, stomach pain, bloating, wind, nausea, reflux, constipation, a flare, tiredness or an allergic reaction), how bad it is, and add notes. Common ones for IBD can be added with a tap.</li>
+      <li>When you log a food that's on your list, Gentle tells you and still lets you add it, and Today marks it "On your can't-eat list". Similar foods count as well, so a cheese toastie gets flagged if milk is on your list, but broad labels like high fibre don't.</li>
+      <li>If your food and bowel logs show a link, say dairy often followed by loose bowel movements, Gentle offers to add that food to your list.</li>
+      <li>Your list goes in the report for your doctor and the spreadsheets, and the AI helper knows about it.</li>
+      <li>"Send report" and the zip option on the problem report screen fill in gentleappdev@gmail.com and the subject line in your email app. Nothing is sent until you press send.</li>
+      <li>Help has two new articles, "Can I see how often I've been going?" and "Can I keep a list of foods I can't eat?".</li>
+    </ul>
+
+    <h3>8 November 2026, 1:15pm</h3>
+    <ul>
+      <li>Today's points now count from when you're up. Gentle takes the first sign of it, such as last night's sleep ending, a check-in, a note, a food or bowel log, or the first hour with 300 or more steps, and assumes nothing before that. It used to count an ordinary amount from 7am, so you could see points used before you'd got out of bed. Early shifts work too. You can switch back in Settings, under Pacing, with "Count my day from when I'm up".</li>
+      <li>A crash or PEM that started on an earlier day and was over by your morning check-in now belongs to the day it started, and today counts as the day after one. Before, both days were crash days and today's allowance was cut twice. The switch is "A crash that ends overnight counts for the day it began", under Pacing.</li>
+      <li>The Gentle watch app's steps count from 5am, when Gentle's day starts, so steps between midnight and 5am aren't counted for two days. The switch is "Count watch steps from 5am", under Watch data.</li>
+      <li>Pace-line alerts and the 80% and 100% budget alerts follow your day, from when you're up until your usual bedtime, which Gentle works out from your last 14 nights. They used to stop at 10pm.</li>
+      <li>The "higher PEM risk today" notification comes in your first 4 hours up, where it used to come at 8 to 11am.</li>
+      <li>The heart-rate notification looks back over the last 15, 30, 45, 60, 90 and 120 minutes, and tells you when you've been over your pace line for two-thirds of one of them, such as "12 of the last 15 minutes" or "40 of the last 60". It only goes out with a fresh reading, and at most once every half hour. Before this it hardly ever went off.</li>
+      <li>Problem reports show these settings and when you got up.</li>
+      <li>Help has two new articles, "Why had I used points before I'd even got up?" and "How does the 'heart rate over your pace line' notification work?".</li>
+    </ul>
+
+    <h3>7 November 2026, 12:01pm</h3>
+    <ul>
+      <li>Gentle learns what your steps really cost you. It looks at your big step days, one and a half times your ordinary day or more, and checks the two days after each for a crash, PEM or a check-in clearly more tired than usual, then compares that with your other days.</li>
+      <li>If big days don't catch up with you any more than other days, steps beyond your ordinary day cost less, down to half the usual rate, up to the most steps you've done without payback. Steps past that cost full price, and steps never cost more than they did before.</li>
+      <li>It needs 4 big days and 5 other days with check-ins after them, and only takes off the full discount once it has 8 big days.</li>
+      <li>Tools, then What Gentle has learned, shows what it found or what it still needs, and the "Moving about" line in your allowance shows the price.</li>
+      <li>The switch is "What steps really cost you", under What Gentle learns, and there's a new Help article, "My busy days (like work shifts) use lots of points".</li>
+    </ul>
+
+    <h3>1 November 2026, 6:25pm</h3>
+    <ul>
+      <li>The watch app starts sending heart rate again by itself when the watch restarts or the app updates. Until now it stopped and didn't say so.</li>
+      <li>Opening Gentle on the watch starts it again if it had stopped, and tells you when it last sent anything.</li>
+      <li>If your phone hasn't heard from the watch app for 30 minutes, it nudges it to start again.</li>
+      <li>Today tells you what's holding your data up. Either the watch app hasn't sent anything since a certain time, with how to start it, or Google Health hasn't passed anything on, with a link that opens it so it syncs.</li>
+      <li>Pulling down to refresh with nothing new says which of those it is, and problem reports show whether the watch app is working.</li>
+      <li>Help has a new article, "Why does it say there's no new watch data since earlier?".</li>
+    </ul>
+
+    <h3>1 November 2026, 2:45pm</h3>
+    <ul>
+      <li>When Android closes Gentle in the background to free up memory, it no longer counts as a problem, because it's normal and nothing is lost. Real crashes and freezes still count.</li>
+      <li>Problem reports say where Gentle was and how much memory it was using.</li>
+      <li>Today only re-reads your watch data every 2 minutes while it's on screen.</li>
+      <li>Log has a History screen with every day back to the first, with the points used of that day's allowance, tiredness, steps, sleep and everything you logged. You can search it and filter it by kind, and the Points filter has a chart of the last 30 days with crash days marked.</li>
+      <li>Gentle keeps each day's allowance, and days from before this have an estimate marked "allowance worked out afterwards".</li>
+      <li>A day's view shows the allowance that day, check-in details, when crashes ended and the plan items you ticked off.</li>
+    </ul>
+
+    <h3>31 October 2026, 10:23pm</h3>
+    <ul>
+      <li>Symptoms you tick in "How are you right now?" can take a little off today's allowance when they're worse than usual for you. A moderate symptom takes off 5% and a severe one 10%, up to 15% in all, and mild ones never count. Your usual is worked out from your last 30 evening check-ins without a crash.</li>
+      <li>Only symptoms likely to cost energy count, such as gut flare symptoms, pain, dizziness, breathlessness and brain fog. Allergies only count when they're severe, and symptoms you've added yourself never change the allowance.</li>
+      <li>A symptom that often comes before your crashes counts half as much again.</li>
+      <li>Nothing counts twice. If your tiredness answers already lowered the allowance, only the bigger cut applies, and a crash day's cut covers symptoms too.</li>
+      <li>The check-in brings over your symptoms from the last one for you to change, and you see the effect before you save. The switch is "Symptoms can lower today's allowance", under Pacing.</li>
+      <li>Help has two tabs, "What it can do", with every feature in a line, and "Questions", and a new article, "Do symptoms change my allowance?".</li>
+    </ul>
+
+    <h3>31 October 2026, 9:46pm</h3>
+    <ul>
+      <li>Saying you feel okay no longer takes points off. If you say you're about ordinary or better after a good morning, the allowance stays where it is. Feeling worse than an ordinary day still lowers it, and feeling better still raises it. The switch is "Feeling okay never lowers my allowance", under Pacing.</li>
+      <li>You can give your own number for an ordinary day's steps, under What Gentle learns, or say something like "I usually do about 4,000 steps". The screen shows what Gentle learned and your watch's typical day over 30 days and 3 months, and warns you if your number is more than twice anything your watch has recorded as typical.</li>
+      <li>Help arrived in More, with about 50 articles in 11 sections, searchable offline, each with a link to its screen. There's a ? on Today too, and with the AI helper on it can answer from the articles.</li>
+    </ul>
+
+    <h3>31 October 2026, 1:29pm</h3>
+    <ul>
+      <li>Sleep counts for the morning it leads into, and a sleep starting from 6pm counts for the next day.</li>
+      <li>Last night's sleep is your main sleep, the longest one starting before noon, plus anything before it that night, and pieces less than 2 hours apart count as one. After a night shift it's the longest sleep of the day.</li>
+      <li>Sleep after you've woken up for the day counts as a nap and shows separately in the day view. A long afternoon sleep on a bad day used to be added to last night's total and push your morning score up.</li>
+      <li>Gentle read your past nights again once to sort them the new way. The switch is "Keep naps apart from last night's sleep", under Watch data.</li>
+    </ul>
+
+    <h3>31 October 2026, 2:12am</h3>
+    <ul>
+      <li>Minutes over your pace line are counted against the same line you see and your watch buzzes at, your usual resting heart rate on days without a crash, PEM or infection, plus 15. The count used to use the last 14 days, flare days included, so it could sit higher than the line on screen.</li>
+      <li>During a long flare, Gentle keeps your last calm figure from the past 90 days.</li>
+      <li>A resting heart rate you've typed in now wins over the watch's, and days you've marked "heart rate wrong" are left out.</li>
+      <li>Your past days were counted again once. The switch is "Keep my pace line steady through flares", under Pacing.</li>
+    </ul>
+
+    <h3>29 October 2026, 1:26pm</h3>
+    <ul>
+      <li>A new Heart-rate checks list in Log keeps every answer you've given about an odd heart-rate spell for 30 days, and you can change any of them if you misclicked or changed your mind. Only "It was real" counts towards your points.</li>
+      <li>Allergies is a new symptom. When you rate it, it opens out into sneezing, a runny or blocked nose, itchy or watery eyes, an itchy or scratchy throat, itchy nose, mouth or ears, sinus pressure, catarrh, hives, itchy skin, and swelling of the face, lips or eyes.</li>
+      <li>The allergies section always says to call 999 if your lips, tongue or throat swell or you're struggling to breathe, and turns red if you rate swelling.</li>
+      <li>New day tags for high pollen, cut grass or hay, animals, dust and mould let Gentle look for what sets your allergies off.</li>
+      <li>You can describe allergies by voice, like "hay fever's really bad, sneezing loads and my eyes are streaming". "Hay fever" used to be logged as a fever, and that's fixed.</li>
+    </ul>
+
+    <h3>29 October 2026, 1:12am</h3>
+    <ul>
+      <li>"Was that your heart, or the watch?" has a third answer, "I don't know". Those minutes are left out of your points.</li>
+    </ul>
+
+    <h3>29 October 2026, 12:35am</h3>
+    <ul>
+      <li>Every option on the problem report screen starts ticked, and you can untick any of them. Your AI key is never included.</li>
+    </ul>
+
+    <h3>29 October 2026, 12:32am</h3>
+    <ul>
+      <li>A very high heart rate while you're barely moving, 40 or more over your pace line, is held back from your points until you say it was real. Gentle asks "Was that your heart, or the watch?" in a notification, on Today and in the day view. The setting is "Ask about odd heart-rate readings".</li>
+      <li>Notes, in Log, keeps anything you type or say with the date and time.</li>
+      <li>If Gentle can't sort a voice note, or only part of one, the rest is saved as a note so nothing you say is lost. When an update teaches Gentle a new phrase, older notes it can now understand get a "Sort it now" button.</li>
+      <li>A new learning feature, "Words in your notes", spots words that keep coming up before your crashes.</li>
+    </ul>
+
+    <h3>29 October 2026, 12:20am</h3>
+    <ul>
+      <li>Your points use your own usual days sooner. Each day of your data moves Gentle's starting guesses a third of the way to your real figures, and Today says the points are a rough guide until it has 3 days.</li>
+      <li>If you haven't had 3 days without a crash, crash days count towards your usual day.</li>
+      <li>Heart-rate readings over 200 are thrown out as watch errors.</li>
+      <li>Until there are 3 days of resting heart rate, the pace line uses whichever is higher of today's and the earlier days'. Every part of the app now uses the same pace line, which wasn't true before.</li>
+    </ul>
+
+    <h3>29 October 2026, 12:04am</h3>
+    <ul>
+      <li>Steps are counted the way Google Health counts them. Gentle uses the watch's steps when you're wearing it and the phone's when you're not, in 15-minute spells. The setting is now called "Count steps like Google Health does".</li>
+      <li>Heart rate from the watch app is added to what Health Connect already gave Gentle for the day. It used to replace it, which could wipe out earlier minutes over the pace line.</li>
+      <li>Under your points on Today, "How was this worked out?" shows the sum behind your allowance, such as 100 × 0.90 × 0.80 = 72 points, with each step explained and where your points have gone so far.</li>
+    </ul>
+
+    <h3>28 October 2026, 11:32pm</h3>
+    <ul>
+      <li>When the Gentle watch app has sent a step count today, Today shows whichever is higher of that and the Health Connect count.</li>
+      <li>When steps haven't arrived for 45 minutes, Today names the app holding them up and has an "Open Google Health to sync now" button. Gentle reads again when you come back, and again after 45 seconds and 2 minutes.</li>
+      <li>Problem reports say when the watch app last sent anything.</li>
+    </ul>
+
+    <h3>28 October 2026, 11:26pm</h3>
+    <ul>
+      <li>An any-time check-in now moves your allowance halfway from what your morning suggested towards how you feel now, by up to 30% either way. Rises are always given, even after a crash or a big day, with a reminder that feeling good now doesn't mean you won't crash later.</li>
+      <li>A crash today still takes 20% off after it's over.</li>
+      <li>Gentle switches to your own usual numbers after 3 ordinary days, not 5.</li>
+      <li>Problem reports show how your points were worked out, when your steps and heart rate last arrived, and your last 7 days of watch data.</li>
+    </ul>
+
+    <h3>28 October 2026, 11:15pm</h3>
+    <ul>
+      <li>Problem reports include today's points and every reason behind them, with your scores, your usual ranges and what Gentle has learned. The zip also has a spreadsheet of your last 60 days.</li>
+    </ul>
+
+    <h3>28 October 2026, 9:31pm</h3>
+    <ul>
+      <li>Saying something like "I'm feeling pretty good, can we adjust my allowance?" now works. Gentle used to drop the feeling and keep only the request, and didn't understand "pretty good", "really well" or "great".</li>
+      <li>Before you save how you feel, Gentle shows what today's allowance would change to, or why it won't change.</li>
+      <li>When you log an activity afterwards, you can give a start and finish time on any past day. While the timer's running you can fix a late start or a forgotten stop, and you can change or remove any timed session.</li>
+      <li>Timed sessions show in the day view, and you can say things like "I had a shower from 2 to 2:30" or "I napped for 30 minutes".</li>
+      <li>Energy drinks, cola and coffee-shop drinks count as caffeine, and sugary ones as high sugar too. "A monster headache" isn't an energy drink.</li>
+      <li>AI settings say which downloaded models are likely to fit your phone, with a warning if yours is probably too big, and the default online model changed to Gemini 3.5 Flash-Lite.</li>
+    </ul>
+
+    <h3>28 October 2026, 8:57pm</h3>
+    <ul>
+      <li>Gentle now learns eight things from your own data. It can warn you early about a crash, find links between food and your gut, learn what activities really cost you, and work out when your payback usually comes. It also learns which part of your cycle is harder, which rests help, your best time of day, and what tends to come with each symptom.</li>
+      <li>They're all on, each has its own switch under What Gentle learns, and a new screen, What Gentle has learned, shows what each one has found or is still waiting for.</li>
+      <li>You can time an activity or a rest from Log, from the play button on a plan item, or by voice ("I'm lying down for a rest"). Your watch's heart rate is added afterwards, and it asks how you feel when you stop.</li>
+      <li>Crash learning compares the last 4 weeks with your own usual rate of crashes, so someone who often crashes isn't marked down for carrying on as usual.</li>
+      <li>One voice note can log several things at once, such as a period, a crash, a meal and a shift.</li>
+    </ul>
+
+    <h3>28 October 2026, 8:40pm</h3>
+    <ul>
+      <li>Gentle learns from your crashes. When you've had more than usual over the last 4 weeks, it lowers your daily allowance, and it goes back up as they ease off. After a long spell with fewer crashes, it offers a 10% rise, which only happens if you say yes. The switch is "Learn from crashes", under Pacing.</li>
+      <li>Changing between mild, moderate and severe moves your allowance part of the way at once, then fades back to your own data over 4 weeks.</li>
+    </ul>
+
+    <h3>28 October 2026, 7:28pm</h3>
+    <ul>
+      <li>Gentle understands about 40 symptoms said in everyday words, including dizziness ("lightheaded", "the room was spinning", "nearly fainted"), gut symptoms, blurred vision and word-finding problems. It reads how bad from things like "7 out of 10" or "really", and asks if you didn't say.</li>
+      <li>A symptom you mention during the day is saved with the time, and if you mention one you don't track yet, Gentle offers to start tracking it.</li>
+      <li>"How are you right now?" has symptom buttons.</li>
+      <li>Mentioning a symptom during the day no longer marks the evening check-in as done.</li>
+      <li>The heart on the app icon sits a little lower.</li>
+    </ul>
+
+    <h3>28 October 2026, 7:19pm</h3>
+    <ul>
+      <li>"How are you right now?" is a check-in you can do at any time, from Log or from Today's energy card. It asks how tired you are and how much energy you have, and can change today's allowance.</li>
+      <li>Voice notes can log bowel movements ("I had a loose one this morning, it was urgent") and aches and pains ("my lower back is aching, about 6 out of 10"), and undo mistakes ("delete the last crash"). If Gentle doesn't recognise anything, you can save what you said as a note.</li>
+      <li>The tiles on Today line up in every theme.</li>
+      <li>Problem reports carry much more detail about the phone and the app, and "Share everything as a zip file" bundles the full app log, crash reports and settings, with switches to add your recent voice notes and all your Gentle data.</li>
+    </ul>
+
+    <h3>28 October 2026, 6:59pm</h3>
+    <ul>
+      <li>The on-device AI can't invent a crash any more. A crash it suggests only counts if you actually mentioned one, and "I didn't crash" or "I might crash" aren't logged as crashes.</li>
+      <li>Saying how you feel right now is saved as a feeling update with the time. If a crash is still going and you say you feel better, Gentle asks whether it's over.</li>
+      <li>When you mention a crash or feeling low and there's one from the last 3 days, Gentle asks whether it's part of that one or something new.</li>
+      <li>Medications moved into Log, and Plan my day lives in Tools.</li>
+    </ul>
+
+    <h3>28 October 2026, 6:42pm</h3>
+    <ul>
+      <li>Steps on screen reset at midnight like your watch, while energy points still reset at 5am. The spreadsheet has both counts.</li>
+    </ul>
+
+    <h3>28 October 2026, 6:04pm</h3>
+    <p>I went through every screen and fixed 15 small problems:</p>
+    <ul>
+      <li>a voice note at 2am was being saved as the next morning's check-in, and is now saved as the evening one;</li>
+      <li>times said after midnight ("a crash at 11pm", "remind me tomorrow at 9", "I worked 8 hours") went to the wrong day or hour;</li>
+      <li>plans made after midnight went into the morning, and HRV readings taken then were labelled as morning ones;</li>
+      <li>"just now" at 2am showed the next day's date;</li>
+      <li>Today had two "connect your watch" cards with no watch connected, and said "0 steps" when none had arrived;</li>
+      <li>some directions in the app pointed to the wrong screens;</li>
+      <li>wording like "1 days", "since 2026-09-18" and "3322 steps";</li>
+      <li>the day view offered step switches on days with no watch data;</li>
+      <li>the bowel note about unknown days kept showing after you'd logged one.</li>
+    </ul>
+    <p>Acid reflux is also a symptom you can turn on.</p>
+
+    <h3>28 October 2026, 5:24pm</h3>
+    <ul>
+      <li>Today explains when its step count differs from your watch's because Gentle's day starts at 5am, and shows both numbers.</li>
+      <li>Steps after midnight count in the evening part of the day, where they used to go into the morning.</li>
+    </ul>
+
+    <h3>28 October 2026, 3:40pm</h3>
+    <ul>
+      <li>Log has a bowel movement tracker with a tappable Bristol stool chart, ticks for urgency, blood, mucus, pain, straining and not fully emptied, and notes. There's an "I haven't been today" button, because a day with nothing logged counts as unknown.</li>
+      <li>Aches and pains, also in Log, records where it hurts across 15 body areas, what it feels like, how bad from 1 to 10, and notes.</li>
+      <li>The report for your doctor has sections for both, as well as your cycle, exercise, work shifts and medications. The spreadsheet export became a set of files, one for each kind of log, and a blank cell means not recorded.</li>
+    </ul>
+
+    <h3>28 October 2026, 2:06am</h3>
+    <ul>
+      <li>You can remove things logged by mistake. Every day has a "What you logged" list with a Remove button on each item, Recent periods has a bin for each period, and you can open any older day.</li>
+    </ul>
+
+    <h3>28 October 2026, 1:58am</h3>
+    <ul>
+      <li>Reminders could arrive at odd hours, like a morning check-in at 2am. Now each one goes out once a day at its time, and never between midnight and 5am.</li>
+      <li>Saving a period day has a Save button and confirms it, there's a list of the last 7 days, and the screen explains how cycle days are counted.</li>
+    </ul>
+
+    <h3>28 October 2026, 12:38am</h3>
+    <ul>
+      <li>What if says "Can't predict yet" until it has 3 morning check-ins, where it used to show a dash. Its energy estimate uses the same sums as Today, and the steps slider fits your own days.</li>
+    </ul>
+
+    <h3>28 October 2026, 12:28am</h3>
+    <ul>
+      <li>If you say "tomorrow", "today" or "yesterday" between midnight and 5am, Gentle asks which day you mean, with the dates.</li>
+    </ul>
+
+    <h3>28 October 2026, 12:23am</h3>
+    <ul>
+      <li>Voice notes ask you to confirm anything Gentle isn't sure about, such as something said with "maybe", a question, or something worked out by the AI. Those start unticked, with the reason.</li>
+      <li>Gentle's day ends at 5am by default.</li>
+      <li>Missing data counts as not recorded. A question you didn't answer stays blank, and a day with no food logged doesn't mean you didn't eat.</li>
+      <li>More has a Report a problem screen. You say what went wrong by typing or talking, and Gentle adds the technical details.</li>
+    </ul>
+
+    <h3>28 October 2026, 12:15am</h3>
+    <ul>
+      <li>The day no longer ends at midnight, so being up until 3 or 4am counts as the same day. You can choose when it ends in Settings, under "My day ends at".</li>
+    </ul>
+
+    <h3>27 October 2026, 11:52pm</h3>
+    <ul>
+      <li>Steps come from what your watch recorded, without adding every app's count together, which could count the same walk twice.</li>
+    </ul>
+
+    <h3>27 October 2026, 10:54pm</h3>
+    <ul>
+      <li>You can log work shifts, with how long and how draining each one was. Gentle counts a shift's effort and checks shifts against how you feel the next day.</li>
+      <li>Voice notes use Gentle's own phrase rules first and only ask the on-device AI when those find nothing, which stops the AI filling the phone's memory. Gentle checks memory before loading the AI, and pauses it if the app closed while it was running.</li>
+      <li>Settings has a Problem reports screen showing why Gentle last closed, and a card on Today when it closed unexpectedly.</li>
+      <li>A new guide, "Bring your heart rate down", with things to do right away and through the day.</li>
+      <li>A new Tools tab in the bottom bar.</li>
+      <li>A heart-rate reading has to be at least 2 over your pace line to count, and you can compare each counted stretch with Google Health.</li>
+      <li>The Save button on Y2K themes no longer grows to fill the screen.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:58pm</h3>
+    <ul>
+      <li>You can track your periods, and Gentle works out your cycle, when your next period is likely and which part of your cycle is harder.</li>
+      <li>There's an exercise log for cardio, strength, yoga, physio and more. Exercise that steps don't capture adds to your points.</li>
+      <li>Both work by voice, such as "I did 30 minutes of gentle yoga" or "my period started yesterday".</li>
+    </ul>
+
+    <h3>27 October 2026, 7:42pm</h3>
+    <ul>
+      <li>Voice notes have a Clear button, and what you've said is kept until you clear it or save it. It used to disappear when you went back or turned the phone.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:39pm</h3>
+    <ul>
+      <li>Frutiger Aero has a goldfish swimming in a glass bubble.</li>
+      <li>Y2K bling arrived, a hot pink and purple theme with leopard print, rhinestones and chrome.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:29pm</h3>
+    <ul>
+      <li>New designs for Y2K sparkle, in soft rainbow pastels with holographic shine and stickers, and Frutiger Aero, with sky, grass, glass and bubbles. The earlier versions are kept as V1 and V2.</li>
+      <li>Clouds in the Frutiger themes go all the way across the screen instead of jumping back halfway.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:23pm</h3>
+    <ul>
+      <li>Short heart-rate spikes no longer count as time over your pace line. Readings are averaged each minute and smoothed, and only 3 or more minutes in a row over the line count.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:18pm</h3>
+    <ul>
+      <li>The pace-line warning only counts new time over the line, where it used to count the whole day on its first check.</li>
+      <li>Connect your watch has a Compare with Google Health section, so you can check each number Gentle reads.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:15pm</h3>
+    <ul>
+      <li>The first versions of Y2K sparkle and Frutiger Aero are kept as V1. The new Y2K sparkle has lighter text, and the new Frutiger Aero has glass bars.</li>
+      <li>Every decorated theme has moving decorations.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:08pm</h3>
+    <ul>
+      <li>Gentle reads heart rate from Health Connect more reliably, and works out the day's average, lowest and highest itself if Health Connect doesn't give them.</li>
+    </ul>
+
+    <h3>27 October 2026, 7:01pm</h3>
+    <ul>
+      <li>Connect your watch spots when only some kinds of data are coming through and says which are missing, and Today flags missing heart rate or HRV.</li>
+    </ul>
+
+    <h3>27 October 2026, 6:54pm</h3>
+    <ul>
+      <li>A new Connect your watch screen explains which app is which (your watch, Google Health, Health Connect and Gentle) and takes you through turning on sharing. Today shows a card if no sleep or heart rate has arrived.</li>
+    </ul>
+
+    <h3>27 October 2026, 6:44pm</h3>
+    <ul>
+      <li>The energy, PEM risk and step allowance sums were rebuilt. Days with the watch on its charger no longer drag your usual down, so ordinary days stop looking huge. Each part of your day is compared with your own usual, worth 50 points for moving about, 25 for heart rate and 25 for thinking and social effort.</li>
+      <li>The Energy points screen has a "How sure is this?" section on what's backed by research and what's Gentle's own estimate.</li>
+      <li>You can backdate crashes and log ones that are still going, and Gentle asks each day whether one is over. It suggests possible triggers and a recovery plan too.</li>
+      <li>Each activity in a plan says why it costs what it does, and you can set your own number.</li>
+      <li>Every screen has a microphone, and new food and drink logging comes with Crohn's and IBD support.</li>
+      <li>Weekly automatic backups to a folder you choose, and the optional AI helper sees your full history.</li>
+      <li>The original Frutiger Aero design became the Bubbles theme, and Y2K Girlypop became Pink.</li>
+    </ul>
+
+    <h3>27 October 2026, 2:10pm</h3>
+    <p>The first version of the phone app and the watch app.</p>
+    <ul>
+      <li>Today showed energy points left, a morning stability score from 1 to 5 with its reasons, PEM risk, recovery, a fatigue forecast and step and heart-rate budgets for the morning, afternoon and evening.</li>
+      <li>Morning and evening check-ins, and voice notes that fill a check-in in for you.</li>
+      <li>Insights, with patterns, trends, charts, a fatigue calendar, a "what if" simulator and medication before-and-after comparisons.</li>
+      <li>A day planner, crash and PEM logging, HRV with your fingertip over the camera, breathing exercises, a monthly function check, a sensory and lighting profile, and a PDF report for your doctor.</li>
+      <li>An optional AI helper, on the phone or with your own free key.</li>
+      <li>The watch app sent heart rate to the phone every few minutes, and a Bluetooth mode gave instant pace alerts from a heart-rate strap.</li>
+      <li>Themes were light, dark, low-stimulus, Y2K Girlypop and Frutiger Aero.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<section class="related">
+  <div class="container">
+    <h2>Related pages</h2>
+    <ul class="related-list">
+      <li><a href="download.html"><strong>Download</strong><span>Get Gentle now, before it&#x27;s on Google Play, with step-by-step install help.</span></a></li>
+      <li><a href="privacy.html"><strong>Privacy</strong><span>Your health data stays on your phone. Here&#x27;s what that means in practice.</span></a></li>
+      <li><a href="free-no-subscription.html"><strong>Free for good</strong><span>No subscriptions or premium features, ever. One optional 99p to remove the ads.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="promise-band" aria-label="The promise">
+  <div class="container promise-inner">
+    <p class="promise-head">Free, and it'll stay free</p>
+    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your health data stays on your phone, and nobody else gets it, me included.</p>
+    <p class="promise-links"><a href="free-no-subscription.html">Why it's free</a> &middot; <a href="privacy.html">Privacy</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand brand-footer"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+      <p>A pacing app for anyone who has to manage limited energy, created by me, <a href="https://benrobart.github.io/">Ben Robart</a>.</p>
+      <p>Found a bug, even a tiny one, or have an idea for a new feature? Please tell me: <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a></p>
+    </div>
+    <div>
+      <h2 class="footer-head">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="download.html">Download</a></li>
+        <li><a href="energy-pacing-app.html">How the points work</a></li>
+        <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+        <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+        <li><a href="crash-pem-tracker.html">Crash and PEM tracker</a></li>
+        <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD fatigue</a></li>
+        <li><a href="bowel-movement-tracker.html">Bowel movements and food</a></li>
+        <li><a href="works-with-your-watch.html">Watches and Health Connect</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="free-no-subscription.html">Free for good</a></li>
+        <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+        <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-small">
+    <p>Gentle is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Talk to your doctor or care team before changing how you manage your health.</p>
+    <p>Android, Google Play, Wear OS, Pixel and Fitbit are trademarks of Google LLC. Other product names belong to their owners.</p>
+    <p><button type="button" class="link-button" id="cookie-settings">Cookie settings</button></p>
+  </div>
+</footer>
+
+<script src="site.js?v=292d97d4" defer></script>
+</body>
+</html>
