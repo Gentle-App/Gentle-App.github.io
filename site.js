@@ -98,7 +98,7 @@
   }
 
   function applyTheme(t) {
-    if (!shots[t]) t = 'aero';
+    if (!shots[t]) t = 'pink';
     root.setAttribute('data-theme', t);
     save('gentle-theme', t);
     paint();
@@ -110,7 +110,7 @@
     paint();
   }
 
-  if (!shots[root.getAttribute('data-theme')]) root.setAttribute('data-theme', 'aero');
+  if (!shots[root.getAttribute('data-theme')]) root.setAttribute('data-theme', 'pink');
   paint();
 
   // Theme picker

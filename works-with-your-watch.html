@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-GB" data-theme="aero">
+<html lang="en-GB" data-theme="pink">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacing App for Pixel Watch, Fitbit, Samsung and Garmin</title>
   <meta name="description" content="Gentle reads steps, heart rate, sleep and HRV through Health Connect, so it works with most watches. There&#x27;s also an optional Wear OS app.">
   <link rel="canonical" href="https://gentle-app.github.io/works-with-your-watch.html">
-  <meta name="theme-color" content="#8FD3FF">
+  <meta name="theme-color" content="#FFE6F3">
 
   <meta property="og:site_name" content="Gentle">
   <meta property="og:title" content="Pacing App for Pixel Watch, Fitbit, Samsung and Garmin">
@@ -33,7 +33,7 @@
         // Low stimulus used to be one of the themes; it's a separate switch now.
         if (t === 'low') { t = 'dark'; low = 'on'; localStorage.setItem('gentle-theme', t); localStorage.setItem('gentle-low', low); }
       } catch (e) {}
-      if (!t) t = 'aero'; // Frutiger Aero is the default look, as in the app
+      if (!t) t = 'pink'; // Pink is the site's default look
       d.setAttribute('data-theme', t);
       if (low === 'on') d.setAttribute('data-low', 'on');
     })();
@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sniglet:wght@800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=c99cdfab">
+  <link rel="stylesheet" href="styles.css?v=4e7cd3cc">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script type="application/ld+json">
@@ -332,6 +332,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=c99cdfab" defer></script>
+<script src="site.js?v=4e7cd3cc" defer></script>
 </body>
 </html>
