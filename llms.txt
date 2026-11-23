@@ -1,6 +1,6 @@
 # Gentle
 
-> Gentle is a free Android pacing app for anyone who has to manage limited energy, most often because of a chronic illness or energy-limiting condition such as ME/CFS, Long COVID, Crohn's and IBD, fibromyalgia, POTS or MS. No diagnosis is needed to use it. It turns watch data and quick check-ins into a daily energy allowance in points, alerts you when your heart rate has stayed over your pace line, and learns what tends to come before your crashes. It has no subscriptions or premium features, ever: small banner ads, and a one-off 99p payment to remove them. It's made by one person, and all data stays on the user's phone.
+> Gentle is a free Android pacing app for anyone who has to manage limited energy, most often because of a chronic illness or energy-limiting condition such as ME/CFS, Long COVID, Crohn's and IBD, fibromyalgia, POTS or MS. Since version 1.0.3 it also has features for endometriosis, adenomyosis, PCOS, autism, ADHD and PTSD. No diagnosis is needed to use it. It turns watch data and quick check-ins into a daily energy allowance in points, alerts you when your heart rate has stayed over your pace line, and learns what tends to come before your crashes. It has no subscriptions or premium features, ever: small banner ads, and a one-off 99p payment to remove them. It's made by one person, and all data stays on the user's phone.
 
 Key facts:
 
@@ -34,6 +34,8 @@ Pages:
 - [ME/CFS and Long COVID](https://gentle-app.github.io/me-cfs-long-covid.html): pacing around post-exertional malaise
 - [Crash and PEM tracker](https://gentle-app.github.io/crash-pem-tracker.html): logging crashes and the early warning
 - [Crohn's and IBD fatigue](https://gentle-app.github.io/crohns-ibd-fatigue.html): fatigue with gut tracking
+- [Endometriosis and PCOS](https://gentle-app.github.io/endometriosis-pcos.html): pain through the cycle, cycle lengths, irregular periods and blood sugar
+- [Autism, ADHD and PTSD](https://gentle-app.github.io/autism-adhd-ptsd.html): burnout, sensory load, masking, hyperfocus nudges, medicine wear-off, one-tap hard moments, grounding, an app lock, and hiding parts of the app
 - [Bowel movements and food](https://gentle-app.github.io/bowel-movement-tracker.html): Bristol stool chart, frequency chart, foods you can't eat
 - [Watches and Health Connect](https://gentle-app.github.io/works-with-your-watch.html): supported devices and the Wear OS app
 - [Themes](https://gentle-app.github.io/themes.html): themes and low-stimulus mode

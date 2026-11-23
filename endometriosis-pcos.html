@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="pink">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endometriosis and PCOS App: Pain, Cycle and Energy Tracker</title>
+  <meta name="description" content="A free app for endometriosis, adenomyosis and PCOS. Track pain through your cycle, cycle lengths and fatigue, and pace your energy each day.">
+  <link rel="canonical" href="https://gentle-app.github.io/endometriosis-pcos.html">
+  <meta name="theme-color" content="#FFE6F3">
+
+  <meta property="og:site_name" content="Gentle">
+  <meta property="og:title" content="Endometriosis and PCOS App: Pain, Cycle and Energy Tracker">
+  <meta property="og:description" content="A free app for endometriosis, adenomyosis and PCOS. Track pain through your cycle, cycle lengths and fatigue, and pace your energy each day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gentle-app.github.io/endometriosis-pcos.html">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://gentle-app.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gentle, a free energy pacing app, showing today's energy points">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Endometriosis and PCOS App: Pain, Cycle and Energy Tracker">
+  <meta name="twitter:description" content="A free app for endometriosis, adenomyosis and PCOS. Track pain through your cycle, cycle lengths and fatigue, and pace your energy each day.">
+  <meta name="twitter:image" content="https://gentle-app.github.io/og-image.png">
+
+  <script>
+    // Set the theme and low-stimulus mode before anything draws, so there's no flash of the wrong look.
+    (function () {
+      var d = document.documentElement, t = null, low = null;
+      try {
+        t = localStorage.getItem('gentle-theme');
+        low = localStorage.getItem('gentle-low');
+        // Low stimulus used to be one of the themes; it's a separate switch now.
+        if (t === 'low') { t = 'dark'; low = 'on'; localStorage.setItem('gentle-theme', t); localStorage.setItem('gentle-low', low); }
+      } catch (e) {}
+      if (!t) t = 'pink'; // Pink is the site's default look
+      d.setAttribute('data-theme', t);
+      if (low === 'on') d.setAttribute('data-low', 'on');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sour+Gummy:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=292d97d4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Gentle",
+      "item": "https://gentle-app.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Endometriosis and PCOS",
+      "item": "https://gentle-app.github.io/endometriosis-pcos.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Endometriosis and PCOS App: Pain, Cycle and Energy Tracker",
+  "description": "A free app for endometriosis, adenomyosis and PCOS. Track pain through your cycle, cycle lengths and fatigue, and pace your energy each day.",
+  "url": "https://gentle-app.github.io/endometriosis-pcos.html",
+  "about": {
+    "@id": "https://gentle-app.github.io/#app"
+  },
+  "dateModified": "2026-11-23"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a free app for endometriosis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gentle is free, with no subscription and no premium version. The pain log, period tracking, the check on which part of your cycle is harder, and the report for your doctor are all in the free app. It's on Android, and you can download it here until it's on Google Play."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Gentle track my pain through my cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Log your pain and your periods, and Gentle checks whether your period, the days before it or the middle of your cycle are usually more painful for you. Your doctor's report shows your average pain on each day of your cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work if my periods are irregular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Gentle shows how long each cycle was. If they vary by more than 9 days, it stops predicting your next period, because a guess would often be wrong, and it keeps learning from the periods you log."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Gentle track weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Gentle only reads the health data it uses, and nothing in it uses your weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it tell me if I have endometriosis or PCOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Gentle is a self-management tool, not a medical device. If you think you might have either, see your GP, and take your Gentle report with you if it helps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is any of this shared with anyone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not unless you share it. Everything stays on your phone, and it only leaves if you send it somewhere yourself, such as the report for your doctor."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7fb1e376e5f4f01a6a2b616ecb05672"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-gtm="GTM-W98S7TCZ" data-clarity="zh57ubybxy">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="hg" x1="40" y1="30" x2="66" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8ACB"/><stop offset=".45" stop-color="#FF2E93"/><stop offset="1" stop-color="#C2006B"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="38" y1="34" x2="44" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+    <symbol id="heart" viewBox="0 0 108 108">
+      <g transform="translate(0 4)">
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="url(#hg)"/>
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6"/>
+        <path d="M35,41 C35,36 39,33.5 43,33.5 C46.5,33.5 49,35.5 50.5,38.5 C46,38 40,40 37,45 C35.8,44.2 35,42.8 35,41 Z" fill="url(#hs)"/>
+        <circle cx="70.5" cy="38" r="2.2" fill="#fff" fill-opacity=".8"/>
+      </g>
+      <path d="M81,25 L82.4,29.6 L87,31 L82.4,32.4 L81,37 L79.6,32.4 L75,31 L79.6,29.6 Z" fill="#fff"/>
+      <path d="M28,62 L29,65 L32,66 L29,67 L28,70 L27,67 L24,66 L27,65 Z" fill="#FFE48A"/>
+    </symbol>
+  </defs>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-0">How it works</button>
+        <ul class="sub" id="sub-0" hidden>
+          <li><a href="energy-pacing-app.html">How the points work</a></li>
+          <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+          <li><a href="crash-pem-tracker.html">Crashes and PEM</a></li>
+          <li><a href="bowel-movement-tracker.html">Gut and food</a></li>
+          <li><a href="works-with-your-watch.html">Watches</a></li>
+        </ul>
+      </li>
+      <li class="has-sub current">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-1">Who it&#x27;s for</button>
+        <ul class="sub" id="sub-1" hidden>
+          <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+          <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD</a></li>
+          <li><a href="endometriosis-pcos.html" aria-current="page">Endometriosis and PCOS</a></li>
+          <li><a href="autism-adhd-ptsd.html">Autism, ADHD and PTSD</a></li>
+          <li><a href="index.html#who">Any energy-limiting condition</a></li>
+        </ul>
+      </li>
+      <li><a href="themes.html">Themes</a></li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-3">Free for good</button>
+        <ul class="sub" id="sub-3" hidden>
+          <li><a href="free-no-subscription.html">Why it&#x27;s free</a></li>
+          <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+          <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        </ul>
+      </li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="download.html" class="nav-download">Download</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="theme-picker">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="palette" viewBox="0 0 24 24" aria-hidden="true"><path class="rim" d="M12 2.8c-5.1 0-9.2 3.9-9.2 8.9 0 5 4 9.5 9 9.5 1.2 0 1.9-.8 1.9-1.8 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8h2.1c2.7 0 4.9-2.2 4.9-4.9 0-4.3-4.2-7.3-9.5-7.3Z"/><circle class="d1" cx="7.4" cy="11.8" r="1.7"/><circle class="d2" cx="10.3" cy="7.4" r="1.7"/><circle class="d3" cx="15.1" cy="7.7" r="1.7"/></svg><span class="theme-label">Theme</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" hidden>
+          <p class="theme-menu-title" id="theme-menu-title">The app's themes</p>
+          <div role="radiogroup" aria-labelledby="theme-menu-title">
+            <button type="button" data-set-theme="calm" role="radio" aria-checked="false"><span class="swatch swatch-calm"></span><span>Calm</span></button>
+            <button type="button" data-set-theme="dark" role="radio" aria-checked="false"><span class="swatch swatch-dark"></span><span>Dark</span></button>
+            <button type="button" data-set-theme="pink" role="radio" aria-checked="false"><span class="swatch swatch-pink"></span><span>Pink</span></button>
+            <button type="button" data-set-theme="y2k" role="radio" aria-checked="false"><span class="swatch swatch-y2k"></span><span>Y2K</span></button>
+            <button type="button" data-set-theme="aero" role="radio" aria-checked="false"><span class="swatch swatch-aero"></span><span>Frutiger Aero</span></button>
+          </div>
+          <div class="theme-menu-divider"></div>
+          <button type="button" class="low-toggle" id="low-toggle" role="switch" aria-checked="false">
+            <span class="low-text"><span>Low stimulus</span><span class="low-hint">Dim, muted and still, on any theme</span></span><span class="switch" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span class="burger" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <nav aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Endometriosis and PCOS</li></ol></nav>
+</div>
+<main id="main">
+<header class="hero">
+  <div class="container narrow">
+    <p class="eyebrow">Endometriosis, adenomyosis and PCOS</p>
+    <h1>Pacing your energy with endometriosis or PCOS</h1>
+    <p class="lede">Endometriosis can leave you exhausted as well as in pain, and with PCOS your periods can turn up whenever they like. Gentle is a free app that tracks your energy, your pain and your cycle together, so you can see which days tend to be harder and plan lighter ones around them.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container narrow">
+    <h2>Why endometriosis wears you out</h2>
+    <p>Fatigue is common with endometriosis. In a study published in Human Reproduction in 2018, about half of the women with endometriosis said they often felt fatigued, compared with about a fifth of the women without it. Pain, heavy periods and broken sleep all add to it.</p>
+    <p>Gentle doesn't diagnose or treat anything. It shows how your energy, pain and cycle line up over the weeks, which gives you and your GP or gynaecologist a real record to look at.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>Pain through your cycle</h2>
+    <p>Log your periods, from spotting to heavy, and log pain whenever you have it, with where it is, what kind of pain and how bad. There's an area for the pelvis or lower tummy. Gentle then checks whether your period, the five days before it or the middle of your cycle are usually harder for you, going by how often you crash, how tired you are and how much pain you're in.</p>
+    <p>If one of them is, your energy allowance is 10% lower on those days, and Gentle tells you a few days ahead so you can plan lighter days. It needs a full cycle or two first. <a href="energy-pacing-app.html">How the points work</a> explains the allowance, and how you spend it through the day.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>The symptoms NICE lists</h2>
+    <p>When you choose endometriosis in the app, Gentle adds period pain, heavy bleeding or flooding, pain during sex, painful bowel movements and painful peeing to your evening check-in. These are the symptoms NICE's endometriosis guideline (NG73) lists as reasons to suspect it. Adenomyosis adds the first three. Any symptoms you already track stay as they are, and you rate each one as none, mild, moderate or severe.</p>
+    <p>Your answers build up into a picture of how often each symptom comes and how bad it gets, and they go into the report for your doctor.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>A report for your gynaecologist</h2>
+    <p>The report is a PDF with charts, plus spreadsheets of everything you've logged. It includes your recent cycle lengths and a chart of your average pain on each day of your cycle, counted from the first day of a period, next to your fatigue, symptoms and any crashes. That's hard to remember accurately between appointments, so having it written down can help.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>Irregular periods and PCOS</h2>
+    <p>The Period screen lists your last eight cycles and how long each one was, with the shortest and longest. FIGO's guidance counts cycles as regular when the shortest and longest are no more than 7 to 9 days apart. If yours vary by more than 9 days, Gentle stops predicting your next period and doesn't try to say which days might be harder, because there's no way to know ahead of time. It still learns from each period once it's happened.</p>
+    <p>Cycles that vary this much, or long gaps between periods, are worth raising with your doctor, and they're in your report. If you wear a blood sugar sensor that shares with Health Connect, Gentle can read it as well and shows each day's average and lowest reading. Gentle doesn't track your weight.</p>
+  </div>
+</section>
+
+<section id="faq" class="section-alt">
+  <div class="container narrow">
+    <h2>Questions about endometriosis and PCOS</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Is there a free app for endometriosis?</summary>
+        <div><p>Gentle is free, with no subscription and no premium version. The pain log, period tracking, the check on which part of your cycle is harder, and the report for your doctor are all in the free app. It's on Android, and you can <a href="download.html">download it here</a> until it's on Google Play.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can Gentle track my pain through my cycle?</summary>
+        <div><p>Yes. Log your pain and your periods, and Gentle checks whether your period, the days before it or the middle of your cycle are usually more painful for you. Your doctor's report shows your average pain on each day of your cycle.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does it work if my periods are irregular?</summary>
+        <div><p>Yes. Gentle shows how long each cycle was. If they vary by more than 9 days, it stops predicting your next period, because a guess would often be wrong, and it keeps learning from the periods you log.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does Gentle track weight?</summary>
+        <div><p>No. Gentle only reads the health data it uses, and nothing in it uses your weight.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can it tell me if I have endometriosis or PCOS?</summary>
+        <div><p>No. Gentle is a self-management tool, not a medical device. If you think you might have either, see your GP, and take your Gentle report with you if it helps.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is any of this shared with anyone?</summary>
+        <div><p>Not unless you share it. Everything stays on your phone, and it only leaves if you send it somewhere yourself, such as the report for your doctor.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="related">
+  <div class="container">
+    <h2>Related pages</h2>
+    <ul class="related-list">
+      <li><a href="energy-pacing-app.html"><strong>How the points work</strong><span>Your ordinary day is 100 points. Here&#x27;s what moves the allowance up or down.</span></a></li>
+      <li><a href="crash-pem-tracker.html"><strong>Crash and PEM tracker</strong><span>Log a crash in seconds and find out what usually comes before yours.</span></a></li>
+      <li><a href="crohns-ibd-fatigue.html"><strong>Crohn&#x27;s and IBD fatigue</strong><span>Crohn&#x27;s and colitis fatigue, symptoms, flares and trigger foods in one app.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="promise-band" aria-label="The promise">
+  <div class="container promise-inner">
+    <p class="promise-head">Free, and it'll stay free</p>
+    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your health data stays on your phone, and nobody else gets it, me included.</p>
+    <p class="promise-links"><a href="free-no-subscription.html">Why it's free</a> &middot; <a href="privacy.html">Privacy</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand brand-footer"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+      <p>A pacing app for anyone who has to manage limited energy, created by me, <a href="https://benrobart.github.io/">Ben Robart</a>.</p>
+      <p>Found a bug, even a tiny one, or have an idea for a new feature? Please tell me: <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a></p>
+    </div>
+    <div>
+      <h2 class="footer-head">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="download.html">Download</a></li>
+        <li><a href="energy-pacing-app.html">How the points work</a></li>
+        <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+        <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+        <li><a href="crash-pem-tracker.html">Crash and PEM tracker</a></li>
+        <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD fatigue</a></li>
+        <li><a href="endometriosis-pcos.html">Endometriosis and PCOS</a></li>
+        <li><a href="autism-adhd-ptsd.html">Autism, ADHD and PTSD</a></li>
+        <li><a href="bowel-movement-tracker.html">Bowel movements and food</a></li>
+        <li><a href="works-with-your-watch.html">Watches and Health Connect</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="free-no-subscription.html">Free for good</a></li>
+        <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+        <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-small">
+    <p>Gentle is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Talk to your doctor or care team before changing how you manage your health.</p>
+    <p>Android, Google Play, Wear OS, Pixel and Fitbit are trademarks of Google LLC. Other product names belong to their owners.</p>
+    <p><button type="button" class="link-button" id="cookie-settings">Cookie settings</button></p>
+  </div>
+</footer>
+
+<script src="site.js?v=292d97d4" defer></script>
+</body>
+</html>

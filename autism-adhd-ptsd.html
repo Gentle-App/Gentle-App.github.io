@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="pink">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacing App for Autism, ADHD and PTSD: Burnout and Sensory Load</title>
+  <meta name="description" content="A free pacing app with autistic burnout and sensory load logging, masking, ADHD hyperfocus nudges, medicine timing and one-tap flashbacks.">
+  <link rel="canonical" href="https://gentle-app.github.io/autism-adhd-ptsd.html">
+  <meta name="theme-color" content="#FFE6F3">
+
+  <meta property="og:site_name" content="Gentle">
+  <meta property="og:title" content="Pacing App for Autism, ADHD and PTSD: Burnout and Sensory Load">
+  <meta property="og:description" content="A free pacing app with autistic burnout and sensory load logging, masking, ADHD hyperfocus nudges, medicine timing and one-tap flashbacks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gentle-app.github.io/autism-adhd-ptsd.html">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://gentle-app.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gentle, a free energy pacing app, showing today's energy points">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pacing App for Autism, ADHD and PTSD: Burnout and Sensory Load">
+  <meta name="twitter:description" content="A free pacing app with autistic burnout and sensory load logging, masking, ADHD hyperfocus nudges, medicine timing and one-tap flashbacks.">
+  <meta name="twitter:image" content="https://gentle-app.github.io/og-image.png">
+
+  <script>
+    // Set the theme and low-stimulus mode before anything draws, so there's no flash of the wrong look.
+    (function () {
+      var d = document.documentElement, t = null, low = null;
+      try {
+        t = localStorage.getItem('gentle-theme');
+        low = localStorage.getItem('gentle-low');
+        // Low stimulus used to be one of the themes; it's a separate switch now.
+        if (t === 'low') { t = 'dark'; low = 'on'; localStorage.setItem('gentle-theme', t); localStorage.setItem('gentle-low', low); }
+      } catch (e) {}
+      if (!t) t = 'pink'; // Pink is the site's default look
+      d.setAttribute('data-theme', t);
+      if (low === 'on') d.setAttribute('data-low', 'on');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Silkscreen&family=Sour+Gummy:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=292d97d4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Gentle",
+      "item": "https://gentle-app.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Autism, ADHD and PTSD",
+      "item": "https://gentle-app.github.io/autism-adhd-ptsd.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Pacing App for Autism, ADHD and PTSD: Burnout and Sensory Load",
+  "description": "A free pacing app with autistic burnout and sensory load logging, masking, ADHD hyperfocus nudges, medicine timing and one-tap flashbacks.",
+  "url": "https://gentle-app.github.io/autism-adhd-ptsd.html",
+  "about": {
+    "@id": "https://gentle-app.github.io/#app"
+  },
+  "dateModified": "2026-11-23"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Gentle an app for autism or ADHD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gentle is a pacing app for anyone who has to ration their energy. Since version 1.0.3 it has parts made for autistic people and people with ADHD, such as burnout logging, sensory load, masking and the hyperfocus nudge. It's free, with no subscription, and you can download it here ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I log autistic burnout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose autism in Settings, under My conditions, and Log a crash offers autistic burnout, shutdown and meltdown. Burnout lowers your allowance while it lasts, the same as a crash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Gentle keep nagging me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you ask it to. The nudges are off until you turn them on, reminders can be snoozed for 30 minutes, and there are no streaks to keep up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to log flashbacks in it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything stays on your phone, and you can lock Gentle with your fingerprint, face or phone PIN. Hard moments only records what kind it was and when, and the report for your doctor only shows how many."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I get help in a crisis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call 999 if you're in danger. Samaritans are free on 116 123 at any time in the UK and Ireland. In England and Wales you can call NHS 111 and choose the mental health option. In the US and Canada, call or text 988, and findahelpline.com lists helplines in other countries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I hide the parts I don't need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. More, then Show and hide parts of Gentle. Hiding something takes it off the screens but keeps everything you've logged, and you can turn it back on whenever you like."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7fb1e376e5f4f01a6a2b616ecb05672"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body data-gtm="GTM-W98S7TCZ" data-clarity="zh57ubybxy">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="hg" x1="40" y1="30" x2="66" y2="77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8ACB"/><stop offset=".45" stop-color="#FF2E93"/><stop offset="1" stop-color="#C2006B"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="38" y1="34" x2="44" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+    <symbol id="heart" viewBox="0 0 108 108">
+      <g transform="translate(0 4)">
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="url(#hg)"/>
+        <path d="M54,77 C33,62 28,51 28,43 C28,35.5 34,30 41,30 C46.5,30 51,33 54,38 C57,33 61.5,30 67,30 C74,30 80,35.5 80,43 C80,51 75,62 54,77 Z" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6"/>
+        <path d="M35,41 C35,36 39,33.5 43,33.5 C46.5,33.5 49,35.5 50.5,38.5 C46,38 40,40 37,45 C35.8,44.2 35,42.8 35,41 Z" fill="url(#hs)"/>
+        <circle cx="70.5" cy="38" r="2.2" fill="#fff" fill-opacity=".8"/>
+      </g>
+      <path d="M81,25 L82.4,29.6 L87,31 L82.4,32.4 L81,37 L79.6,32.4 L75,31 L79.6,29.6 Z" fill="#fff"/>
+      <path d="M28,62 L29,65 L32,66 L29,67 L28,70 L27,67 L24,66 L27,65 Z" fill="#FFE48A"/>
+    </symbol>
+  </defs>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-0">How it works</button>
+        <ul class="sub" id="sub-0" hidden>
+          <li><a href="energy-pacing-app.html">How the points work</a></li>
+          <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+          <li><a href="crash-pem-tracker.html">Crashes and PEM</a></li>
+          <li><a href="bowel-movement-tracker.html">Gut and food</a></li>
+          <li><a href="works-with-your-watch.html">Watches</a></li>
+        </ul>
+      </li>
+      <li class="has-sub current">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-1">Who it&#x27;s for</button>
+        <ul class="sub" id="sub-1" hidden>
+          <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+          <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD</a></li>
+          <li><a href="endometriosis-pcos.html">Endometriosis and PCOS</a></li>
+          <li><a href="autism-adhd-ptsd.html" aria-current="page">Autism, ADHD and PTSD</a></li>
+          <li><a href="index.html#who">Any energy-limiting condition</a></li>
+        </ul>
+      </li>
+      <li><a href="themes.html">Themes</a></li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="sub-3">Free for good</button>
+        <ul class="sub" id="sub-3" hidden>
+          <li><a href="free-no-subscription.html">Why it&#x27;s free</a></li>
+          <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+          <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        </ul>
+      </li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="download.html" class="nav-download">Download</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="theme-picker">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="palette" viewBox="0 0 24 24" aria-hidden="true"><path class="rim" d="M12 2.8c-5.1 0-9.2 3.9-9.2 8.9 0 5 4 9.5 9 9.5 1.2 0 1.9-.8 1.9-1.8 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8h2.1c2.7 0 4.9-2.2 4.9-4.9 0-4.3-4.2-7.3-9.5-7.3Z"/><circle class="d1" cx="7.4" cy="11.8" r="1.7"/><circle class="d2" cx="10.3" cy="7.4" r="1.7"/><circle class="d3" cx="15.1" cy="7.7" r="1.7"/></svg><span class="theme-label">Theme</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" hidden>
+          <p class="theme-menu-title" id="theme-menu-title">The app's themes</p>
+          <div role="radiogroup" aria-labelledby="theme-menu-title">
+            <button type="button" data-set-theme="calm" role="radio" aria-checked="false"><span class="swatch swatch-calm"></span><span>Calm</span></button>
+            <button type="button" data-set-theme="dark" role="radio" aria-checked="false"><span class="swatch swatch-dark"></span><span>Dark</span></button>
+            <button type="button" data-set-theme="pink" role="radio" aria-checked="false"><span class="swatch swatch-pink"></span><span>Pink</span></button>
+            <button type="button" data-set-theme="y2k" role="radio" aria-checked="false"><span class="swatch swatch-y2k"></span><span>Y2K</span></button>
+            <button type="button" data-set-theme="aero" role="radio" aria-checked="false"><span class="swatch swatch-aero"></span><span>Frutiger Aero</span></button>
+          </div>
+          <div class="theme-menu-divider"></div>
+          <button type="button" class="low-toggle" id="low-toggle" role="switch" aria-checked="false">
+            <span class="low-text"><span>Low stimulus</span><span class="low-hint">Dim, muted and still, on any theme</span></span><span class="switch" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span class="burger" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <nav aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Autism, ADHD and PTSD</li></ol></nav>
+</div>
+<main id="main">
+<header class="hero">
+  <div class="container narrow">
+    <p class="eyebrow">Autism, ADHD, PTSD and CPTSD</p>
+    <h1>Pacing your energy with autism, ADHD or PTSD</h1>
+    <p class="lede">Spoon theory started with chronic illness, but plenty of autistic people, people with ADHD and people living with trauma use it too. Gentle counts your energy in points through the day, and version 1.0.3 added parts made for each of these. You can hide anything you don't need.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container narrow">
+    <h2>Autistic burnout, shutdowns and meltdowns</h2>
+    <p>Researchers who interviewed autistic adults (Raymaker and colleagues, in Autism in Adulthood, 2020) described autistic burnout as long-lasting exhaustion, with less tolerance for sound, light and people, and skills that suddenly feel harder. That's close to how an energy crash works, so Gentle treats it like one. If you've chosen autism in the app, Log a crash also offers autistic burnout, shutdown and meltdown.</p>
+    <p>Burnout lowers today's allowance by 20% for as long as it lasts, the same as a crash. Shutdowns and meltdowns don't change your allowance, but each one shows what came before it, such as a lot of sensory load, masking, a big day or short sleep. You can also say "I had a meltdown" in a voice note.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>Sensory load</h2>
+    <p>Sensory load, in the Log tab, is for when something was too much. Tap noise, light, crowds, smells, textures, touch or heat and cold once for noticeable, twice for a lot and three times for overwhelming, and say roughly how long it went on. Gentle works out the points the same way it does for any activity, so an hour in a loud supermarket costs far more than ten minutes of a bright screen.</p>
+    <p>The screen shows how tired you were on the days after a lot of sensory load, so you can see whether it tends to catch up with you the next day.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>Masking</h2>
+    <p>Masking, sometimes called camouflaging, means hiding how you really are around other people. Autistic adults in a 2017 study by Hull and colleagues described it as exhausting. In Plan my day and the activity timer, social time has a masking switch. Masked time counts as more emotional effort, so it uses more points, and once you've masked on three days with check-ins afterwards, Plan my day shows how long you usually take to get back to normal.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>Body signals</h2>
+    <p>Some people find it hard to notice what their body is telling them until it's too late. If you turn on body-signal check-ins, and your watch shares heart rate and steps with Health Connect, Gentle asks "How are you doing?" when your heart rate has been over your pace line for 20 minutes while you've been sitting still. It asks at most once every two hours. You can tap it to check in, or ignore it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>Hyperfocus, medicine and small steps</h2>
+    <p>The hyperfocus nudge is for when you're timing something and lose track of time. After 30, 45, 60 or 90 minutes, whichever you choose, Gentle suggests a break, and again each time that much longer passes. Eat and drink nudges remind you while you're up if nothing has been logged for two, three or four hours. Both are off until you turn them on, and every reminder has a Snooze 30 min button. There are no streaks to keep up.</p>
+    <p>If you take a medicine that wears off, such as a short-acting ADHD medicine, give it a wear-off time and tap "Took a dose now" when you take it. Today then shows when each dose wears off. Check in a few times while it's working and a few times after, and Gentle shows how your energy follows it.</p>
+    <p>In Plan my day you can break a task into small steps, each with its own cost. Only the steps you tick off count toward your points, so if you stop halfway, your points show what you actually did.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container narrow">
+    <h2>Flashbacks, nightmares and triggers</h2>
+    <p>Hard moments, in the Log tab, records a trigger, flashback or nightmare with one tap. You don't have to describe it or write anything. If you've chosen PTSD or CPTSD, there's a Hard moment button on Today as well. Over time Gentle shows how they link with your sleep, your resting heart rate the next day and any crashes, and your report for your doctor only says how many there were.</p>
+    <p>Breathing and grounding, in Tools, has the 5-4-3-2-1 grounding exercise, which takes you through things you can see, feel, hear, smell and taste one at a time, with nothing moving on the screen. You can also lock Gentle with your phone's fingerprint, face or PIN, so it stays private on a phone other people use.</p>
+    <p>Gentle isn't a crisis service. If you need help now, call 999, or call Samaritans free on 116 123 at any time in the UK and Ireland. In England and Wales, NHS 111 has a mental health option. In the US and Canada, call or text 988.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container narrow">
+    <h2>Less on screen</h2>
+    <p>Gentle has a lot in it, and you won't need all of it. Show and hide parts of Gentle, under More, lets you turn off any of 20 parts, such as food, periods, work shifts or the questionnaires. Nothing you've logged is deleted, and turning a part back on brings it all back. Nothing is hidden unless you choose, but if you've picked autism, ADHD or PTSD, or you use low-stimulus mode, Today offers it once.</p>
+  </div>
+</section>
+
+<section id="faq" class="section-alt">
+  <div class="container narrow">
+    <h2>Questions about autism, ADHD and PTSD</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Is Gentle an app for autism or ADHD?</summary>
+        <div><p>Gentle is a pacing app for anyone who has to ration their energy. Since version 1.0.3 it has parts made for autistic people and people with ADHD, such as burnout logging, sensory load, masking and the hyperfocus nudge. It's free, with no subscription, and you can <a href="download.html">download it here</a>.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I log autistic burnout?</summary>
+        <div><p>Yes. Choose autism in Settings, under My conditions, and Log a crash offers autistic burnout, shutdown and meltdown. Burnout lowers your allowance while it lasts, the same as a crash.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Will Gentle keep nagging me?</summary>
+        <div><p>Only if you ask it to. The nudges are off until you turn them on, reminders can be snoozed for 30 minutes, and there are no streaks to keep up.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is it safe to log flashbacks in it?</summary>
+        <div><p>Everything stays on your phone, and you can lock Gentle with your fingerprint, face or phone PIN. Hard moments only records what kind it was and when, and the report for your doctor only shows how many.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Where can I get help in a crisis?</summary>
+        <div><p>Call 999 if you're in danger. Samaritans are free on 116 123 at any time in the UK and Ireland. In England and Wales you can call NHS 111 and choose the mental health option. In the US and Canada, call or text 988, and findahelpline.com lists helplines in other countries.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I hide the parts I don't need?</summary>
+        <div><p>Yes. More, then Show and hide parts of Gentle. Hiding something takes it off the screens but keeps everything you've logged, and you can turn it back on whenever you like.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="related">
+  <div class="container">
+    <h2>Related pages</h2>
+    <ul class="related-list">
+      <li><a href="energy-pacing-app.html"><strong>How the points work</strong><span>Your ordinary day is 100 points. Here&#x27;s what moves the allowance up or down.</span></a></li>
+      <li><a href="crash-pem-tracker.html"><strong>Crash and PEM tracker</strong><span>Log a crash in seconds and find out what usually comes before yours.</span></a></li>
+      <li><a href="privacy.html"><strong>Privacy</strong><span>Your health data stays on your phone. Here&#x27;s what that means in practice.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="promise-band" aria-label="The promise">
+  <div class="container promise-inner">
+    <p class="promise-head">Free, and it'll stay free</p>
+    <p>There will never be a subscription or a premium version. The app has small banner ads, which a one-off 99p (99 cents in the US) gets rid of, and that's the only thing you can buy. Your health data stays on your phone, and nobody else gets it, me included.</p>
+    <p class="promise-links"><a href="free-no-subscription.html">Why it's free</a> &middot; <a href="privacy.html">Privacy</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand brand-footer"><svg viewBox="0 0 108 108" aria-hidden="true"><use href="#heart"></use></svg><span>Gentle</span></a>
+      <p>A pacing app for anyone who has to manage limited energy, created by me, <a href="https://benrobart.github.io/">Ben Robart</a>.</p>
+      <p>Found a bug, even a tiny one, or have an idea for a new feature? Please tell me: <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a></p>
+    </div>
+    <div>
+      <h2 class="footer-head">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="download.html">Download</a></li>
+        <li><a href="energy-pacing-app.html">How the points work</a></li>
+        <li><a href="heart-rate-pacing.html">Heart-rate pacing</a></li>
+        <li><a href="me-cfs-long-covid.html">ME/CFS and Long COVID</a></li>
+        <li><a href="crash-pem-tracker.html">Crash and PEM tracker</a></li>
+        <li><a href="crohns-ibd-fatigue.html">Crohn&#x27;s and IBD fatigue</a></li>
+        <li><a href="endometriosis-pcos.html">Endometriosis and PCOS</a></li>
+        <li><a href="autism-adhd-ptsd.html">Autism, ADHD and PTSD</a></li>
+        <li><a href="bowel-movement-tracker.html">Bowel movements and food</a></li>
+        <li><a href="works-with-your-watch.html">Watches and Health Connect</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="free-no-subscription.html">Free for good</a></li>
+        <li><a href="visible-membership-cost.html">Visible membership cost</a></li>
+        <li><a href="fatiguesense-subscription.html">FatigueSense subscription</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-small">
+    <p>Gentle is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Talk to your doctor or care team before changing how you manage your health.</p>
+    <p>Android, Google Play, Wear OS, Pixel and Fitbit are trademarks of Google LLC. Other product names belong to their owners.</p>
+    <p><button type="button" class="link-button" id="cookie-settings">Cookie settings</button></p>
+  </div>
+</footer>
+
+<script src="site.js?v=292d97d4" defer></script>
+</body>
+</html>
