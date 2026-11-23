@@ -87,7 +87,7 @@
       "name": "Is it safe to install an app from outside Google Play?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only download Gentle from this page. The file is signed with my developer key, and Android only installs updates signed with the same key, so nobody else can slip in a changed version later. If you'd like to check the file, its SHA-256 is fc699b3ba44a3e9cc981e5e998476f410b5bb162f179069736a952768a3e7122 and the signing certificate's SHA-256 is d7cf4823d718b2c4c07671e9f706d13e106669703e88440f60e0c0a468c38f07."
+        "text": "Only download Gentle from this page. The file is signed with my developer key, and Android only installs updates signed with the same key, so nobody else can slip in a changed version later. If you'd like to check the file, its SHA-256 is 902982e967d71c6314f6c94f9b692d3d80cdeb277a7c1ee644a4e6cbb7ecabaa and the signing certificate's SHA-256 is d7cf4823d718b2c4c07671e9f706d13e106669703e88440f60e0c0a468c38f07."
       }
     },
     {
@@ -220,13 +220,30 @@
     <p class="lede">Gentle isn't on Google Play yet. Until it is, you can download it here and install it yourself. It's the same free app, and it takes a couple of minutes.</p>
     <div class="download-box">
       <a class="btn btn-big" href="https://gentle-count.gentle-app.workers.dev/download/Gentle.apk" data-download="apk">Download Gentle for Android</a>
-      <p class="download-meta">Version 1.0.1 &middot; 51 MB &middot; Android 8.0 or later &middot; <a href="changelog.html">What's new</a></p>
+      <p class="download-meta">Version 1.0.2 &middot; 52 MB &middot; Android 8.0 or later &middot; <a href="changelog.html">What's new</a></p>
     </div>
     <p class="small">Having trouble installing it? Email me at <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a> and I'll help you get it working.</p>
     <p class="small muted">Open this page on the phone you want Gentle on. On a computer, you can send yourself the link instead: gentle-app.github.io/download.html</p>
-    <p class="small">Have a Wear OS watch? There's an <a href="#watch">optional watch app</a> too.</p>
+    <p class="small">Have a Wear OS watch? There's an <a href="#watch">optional watch app</a> too. Already using Gentle 1.0.1 or earlier? <a href="#moving">Move your data across</a> first.</p>
   </div>
 </header>
+
+<section id="moving">
+  <div class="container narrow">
+    <h2>Already have Gentle from this website?</h2>
+    <p>Gentle is getting ready for Google Play. The name Android uses to tell apps apart, com.gentle.app, was already taken there, so from version 1.0.2 Gentle is com.gentlepacing.app. Android sees that as a different app, so the new version installs next to your old Gentle instead of over the top. Moving your data across takes a couple of minutes.</p>
+    <ol class="steps">
+      <li>In your current Gentle, go to <strong>Tools</strong>, then <strong>Report for my doctor</strong>, and tap <strong>Back up everything</strong>. Save the file somewhere easy to find, such as Downloads.</li>
+      <li>Download and install the new version, using the <a href="#install">steps below</a>. You'll have two Gentles on your phone for a little while.</li>
+      <li>Open the new one. When it asks you to set up, tap <strong>Explore with sample data first</strong>.</li>
+      <li>Go to <strong>Tools</strong>, then <strong>Report for my doctor</strong>, tap <strong>Restore a backup</strong> and pick the file you saved. Every entry, note, watch reading and setting comes back.</li>
+      <li>Go to <strong>Settings</strong>, tap <strong>What Gentle may read</strong> and allow your health data again. If you had weekly automatic backups, turn them on again and choose the folder.</li>
+      <li>When you've checked everything is there, uninstall the old Gentle. To tell them apart, press and hold an icon and tap <strong>App info</strong>, where the old one says version 1.0.1 or earlier.</li>
+    </ol>
+    <p class="small">If you use the watch app, install the new one too, using the <a href="#watch">watch steps below</a>, and uninstall the old one from your watch. The new watch app only talks to the new phone app.</p>
+    <p class="small muted">After this, new versions install over the top again, and your data stays where it is.</p>
+  </div>
+</section>
 
 <section class="section-alt" id="install">
   <div class="container narrow">
@@ -255,7 +272,7 @@
     <p>Installing it is fiddlier than the phone app, because watches don't have an "allow unknown apps" switch. You'll need a computer for about ten minutes, or a helper app on your phone. Install Gentle on your phone first.</p>
     <div class="download-box">
       <a class="btn btn-quiet" href="https://gentle-count.gentle-app.workers.dev/download/Gentle-Watch.apk" data-download="watch-apk">Download the watch app</a>
-      <p class="download-meta">Version 1.0.0 &middot; 2.3 MB &middot; Wear OS 3 or later</p>
+      <p class="download-meta">Version 1.0.1 &middot; 2.3 MB &middot; Wear OS 3 or later</p>
     </div>
     <h3>Installing it from a computer</h3>
     <ol class="steps">
@@ -279,7 +296,7 @@
 <section class="section-alt">
   <div class="container narrow">
     <h2>Getting updates</h2>
-    <p>Apps installed this way don't update themselves. When there's a new version it'll be on this page, so download it and install it over the top in the same way, on your phone and, if you use it, on your watch. Your data stays where it is.</p>
+    <p>Apps installed this way don't update themselves. When there's a new version it'll be on this page, so download it and install it over the top in the same way, on your phone and, if you use it, on your watch. Your data stays where it is. The one exception is moving from 1.0.1 or earlier to 1.0.2, which has its own steps <a href="#moving">at the top of this page</a>.</p>
     <p>Once Gentle is on Google Play, you'll find it there instead, and this page will go.</p>
     <div class="bug-plea">
       <p>If something doesn't work once Gentle is installed, please tell me. In the app, tap More, then "Report a problem", or email <a href="mailto:gentleappdev@gmail.com">gentleappdev@gmail.com</a>.</p>
@@ -293,7 +310,7 @@
     <div class="faq">
       <details class="faq-item">
         <summary>Is it safe to install an app from outside Google Play?</summary>
-        <div><p>Only download Gentle from this page. The file is signed with my developer key, and Android only installs updates signed with the same key, so nobody else can slip in a changed version later. If you'd like to check the file, its SHA-256 is fc699b3ba44a3e9cc981e5e998476f410b5bb162f179069736a952768a3e7122 and the signing certificate's SHA-256 is d7cf4823d718b2c4c07671e9f706d13e106669703e88440f60e0c0a468c38f07.</p></div>
+        <div><p>Only download Gentle from this page. The file is signed with my developer key, and Android only installs updates signed with the same key, so nobody else can slip in a changed version later. If you'd like to check the file, its SHA-256 is 902982e967d71c6314f6c94f9b692d3d80cdeb277a7c1ee644a4e6cbb7ecabaa and the signing certificate's SHA-256 is d7cf4823d718b2c4c07671e9f706d13e106669703e88440f60e0c0a468c38f07.</p></div>
       </details>
       <details class="faq-item">
         <summary>Why does my phone warn me about it?</summary>
